@@ -1,0 +1,63 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'com.biosis.biosislite.Main'
+
+sourceCompatibility = '1.8'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+// NetBeans will automatically add "run" and "debug" tasks relying on the
+// "mainClass" property. You may however define the property prior executing
+// tasks by passing a "-PmainClass=<QUALIFIED_CLASS_NAME>" argument.
+//
+// Note however, that you may define your own "run" and "debug" task if you
+// prefer. In this case NetBeans will not add these tasks but you may rely on
+// your own implementation.
+if (!hasProperty('mainClass')) {
+    ext.mainClass = 'com.biosis.biosislite.Application'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.10'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    
+    compile(
+        'org.hibernate:hibernate-entitymanager:4.3.11.Final',
+        'com.toedter:jcalendar:1.4',
+        'net.sf.jasperreports:jasperreports:6.1.0',
+        'com.lowagie:itext:2.1.7',
+        'net.java.dev.beansbinding:beansbinding:1.2.1',
+        'log4j:log4j:1.2.17',
+        'org.swinglabs:swingx:1.6.1',
+        'com.opencsv:opencsv:3.6',
+        'com.sun.mail:javax.mail:1.5.0'
+    )
+}
+
+jar {
+//    into('lib'){
+//        from configurations.runtime
+//    }
+    exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA', 'META-INF/*.MF'
+    manifest {
+        
+        attributes(
+            'Main-Class': mainClassName,
+            "Class-Path": configurations.runtime.files.collect { "lib/$it.name" }.join(' ')
+        )
+    }
+}
+
+
+
+task copyToLib(type: Copy) {
+    into "$buildDir/libs/lib"
+    from configurations.runtime
+}
+
+build.dependsOn(copyToLib)

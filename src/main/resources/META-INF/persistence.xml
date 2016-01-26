@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="biosis-PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>com.biosis.biosislite.entidades.Acceso</class>
+    <class>com.biosis.biosislite.entidades.AsignacionHorario</class>
+    <class>com.biosis.biosislite.entidades.AsignacionPermiso</class>
+    <class>com.biosis.biosislite.entidades.Bitacora</class>
+    <class>com.biosis.biosislite.entidades.DetalleGrupoHorario</class>
+    <class>com.biosis.biosislite.entidades.DetalleRegistroAsistencia</class>
+    <class>com.biosis.biosislite.entidades.Feriado</class>
+    <class>com.biosis.biosislite.entidades.GrupoHorario</class>
+    <class>com.biosis.biosislite.entidades.Horario</class>
+    <class>com.biosis.biosislite.entidades.InterrupcionVacacion</class>
+    <class>com.biosis.biosislite.entidades.Jornada</class>
+    <class>com.biosis.biosislite.entidades.Marcacion</class>
+    <class>com.biosis.biosislite.entidades.Periodo</class>
+    <class>com.biosis.biosislite.entidades.Permiso</class>
+    <class>com.biosis.biosislite.entidades.RegistroAsistencia</class>
+    <class>com.biosis.biosislite.entidades.Rol</class>
+    <class>com.biosis.biosislite.entidades.RolAcceso</class>
+    <class>com.biosis.biosislite.entidades.SaldoVacacional</class>
+    <class>com.biosis.biosislite.entidades.TCAnalisis</class>
+    <class>com.biosis.biosislite.entidades.TCSistema</class>
+    <class>com.biosis.biosislite.entidades.TipoPermiso</class>
+    <class>com.biosis.biosislite.entidades.Usuario</class>
+    <class>com.biosis.biosislite.entidades.Vacacion</class>
+    <class>com.biosis.biosislite.entidades.escalafon.Empleado</class>
+    <class>com.biosis.biosislite.entidades.escalafon.FichaGeneral</class>
+    <class>com.biosis.biosislite.entidades.escalafon.FichaLaboral</class>
+    <class>com.biosis.biosislite.entidades.escalafon.Nacionalidad</class>
+    <class>com.biosis.biosislite.entidades.escalafon.NivelEducativo</class>
+    <class>com.biosis.biosislite.entidades.escalafon.RegimenLaboral</class>
+    <class>com.biosis.biosislite.entidades.escalafon.SituacionTrabajador</class>
+    <class>com.biosis.biosislite.entidades.escalafon.TipoContrato</class>
+    <class>com.biosis.biosislite.entidades.escalafon.TipoDocumento</class>
+    <class>com.biosis.biosislite.entidades.escalafon.TipoVia</class>
+    <class>com.biosis.biosislite.entidades.escalafon.TipoZona</class>
+    <class>com.biosis.biosislite.entidades.escalafon.Ubigeo</class>
+    <class>com.biosis.biosislite.entidades.CambioTurno</class>
+    <class>com.biosis.biosislite.entidades.CompraVacacion</class>
+    <class>com.biosis.biosislite.entidades.Turno</class>
+    <class>com.biosis.biosislite.entidades.escalafon.Departamento</class>
+    <class>com.biosis.biosislite.entidades.DetalleJornada</class>
+    <class>com.biosis.biosislite.entidades.Autorizacion</class>
+    <class>com.biosis.biosislite.entidades.escalafon.AreaEmpleado</class>
+    <class>com.biosis.biosislite.entidades.escalafon.Contrato</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://192.168.0.101\JUPITER;databaseName=ensa_biosis_final;sendTimeAsDateTime=false"/>
+      <property name="javax.persistence.jdbc.password" value="Elhacker12"/>
+      <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <property name="javax.persistence.jdbc.user" value="sa"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="hibernate.show_sql" value="false"/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="biostar-PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>com.biosis.biosislite.entidades.biostar.Evento</class>
+    <class>com.biosis.biosislite.entidades.biostar.Reader</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://127.0.0.1\MSS2005EX;databaseName=BDreloj"/>
+      <property name="javax.persistence.jdbc.password" value="Elhacker12"/>
+      <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <property name="javax.persistence.jdbc.user" value="sa"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="sisgedo-PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>com.biosis.biosislite.entidades.sisgedo.Boleta</class>
+    <class>com.biosis.biosislite.entidades.sisgedo.Motivo</class>
+    <class>com.biosis.biosislite.entidades.sisgedo.UsuarioSISGEDO</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/sisgedo_tramite?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.password" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="generadorbiostar-PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/sisgedo_tramite?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.password" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+    </properties>
+  </persistence-unit>
+</persistence>
