@@ -60,4 +60,10 @@ task copyToLib(type: Copy) {
     from configurations.runtime
 }
 
+task copyConfig(type: Copy){
+    into "$buildDir/libs/config"
+    from "config"
+}
+
+copyToLib.dependsOn(copyConfig)
 build.dependsOn(copyToLib)
