@@ -17,6 +17,7 @@ import com.biosis.biosislite.entidades.TipoPermiso;
 import com.biosis.biosislite.entidades.escalafon.Empleado;
 import com.biosis.biosislite.utiles.UsuarioActivo;
 import com.biosis.biosislite.vistas.dialogos.DlgEmpleado;
+import com.biosis.biosislite.vistas.dialogos.DlgPermisoCRU;
 import com.biosis.biosislite.vistas.dialogos.DlgTipoPermiso;
 import com.biosis.biosislite.vistas.modelos.MTAsignacionPermiso;
 import com.biosis.biosislite.vistas.modelos.MTEmpleado;
@@ -55,6 +56,7 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
     private Empleado empleadoSeleccionado;
     private AsignacionPermisoControlador ac;
     private final ReporteUtil reporteador;
+    private DlgPermisoCRU dlgPermisoCRU;
 
     public AsignarPermiso() {
         initComponents();
@@ -155,6 +157,7 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
 
         jPanel3.setLayout(new java.awt.GridLayout(1, 0, 10, 0));
 
+        btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Add_24x24.png"))); // NOI18N
         btnNuevo.setText("Nuevo");
         btnNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,6 +166,7 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         });
         jPanel3.add(btnNuevo);
 
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Edit_24x24.png"))); // NOI18N
         btnModificar.setText("Modificar");
         btnModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,6 +175,7 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         });
         jPanel3.add(btnModificar);
 
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Delete_24x24.png"))); // NOI18N
         jButton3.setText("Eliminar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,6 +184,7 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         });
         jPanel3.add(jButton3);
 
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Print_24x24.png"))); // NOI18N
         jButton2.setText("Imprimir boleta");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -273,14 +279,17 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         gridBagConstraints.gridy = 4;
         pnlListado.add(pnlNavegacion, gridBagConstraints);
 
-        pnlBusqueda.setLayout(new java.awt.GridBagLayout());
+        java.awt.GridBagLayout pnlBusquedaLayout = new java.awt.GridBagLayout();
+        pnlBusquedaLayout.columnWidths = new int[] {0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0};
+        pnlBusquedaLayout.rowHeights = new int[] {0, 5, 0, 5, 0};
+        pnlBusqueda.setLayout(pnlBusquedaLayout);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
         pnlBusqueda.add(dcFechaInicioBusqueda, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 2;
         pnlBusqueda.add(dcFechaFinBusqueda, gridBagConstraints);
 
         txtEmpleado.setEditable(false);
@@ -295,9 +304,9 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.gridwidth = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 0.1;
         pnlBusqueda.add(txtEmpleado, gridBagConstraints);
@@ -316,30 +325,31 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridx = 12;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         pnlBusqueda.add(btnLimpiar, gridBagConstraints);
 
-        jButton4.setText("...");
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/User_16x16.png"))); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridx = 10;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         pnlBusqueda.add(jButton4, gridBagConstraints);
 
         jLabel9.setText("-");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         pnlBusqueda.add(jLabel9, gridBagConstraints);
 
+        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Find_16x16.png"))); // NOI18N
         btnBuscar.setText("Buscar");
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -348,14 +358,14 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         pnlBusqueda.add(btnBuscar, gridBagConstraints);
 
         jLabel5.setText("Fechas:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridy = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_END;
         pnlBusqueda.add(jLabel5, gridBagConstraints);
 
@@ -663,8 +673,17 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         this.accion = Controlador.NUEVO;
         controlador.prepararCrear();
-        this.controles(accion);
-        integrantes.clear();
+        dlgPermisoCRU = new DlgPermisoCRU(this, controlador.getSeleccionado(), accion);
+        dlgPermisoCRU.setVisible(true);
+        if (dlgPermisoCRU.isAccionRealizada()) {
+            Permiso permiso = dlgPermisoCRU.getPermiso();
+            if (permiso != null) {
+                busqueda(permiso);
+            }
+        }
+
+//        this.controles(accion);
+//        integrantes.clear();
     }//GEN-LAST:event_btnNuevoActionPerformed
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
@@ -730,7 +749,7 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
                 FormularioUtil.limpiarComponente(this.pnlDatos);
                 this.integrantes.clear();
                 this.controles(accion);
-                
+
                 this.busqueda();
 
                 if (FormularioUtil.dialogoConfirmar(this, 4)) {
@@ -811,7 +830,7 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         // TODO add your handling code here:
         busqueda();
-        
+
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnPrimeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrimeroActionPerformed
@@ -1054,7 +1073,6 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
             FormularioUtil.limpiarComponente(this.pnlDatos);
         }
 
-        
         this.txtTipoPermiso.setEditable(false);
         checkPorFecha(accion);
     }
@@ -1097,6 +1115,15 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         System.out.println("LISTA: " + lista.size());
         listado.addAll(lista);
 
+        tblTabla.packAll();
+    }
+
+    private void buscar(Permiso permiso) {
+        tamanioPagina = Integer.parseInt(cboTamanio.getSelectedItem().toString());
+        listado.clear();
+        permiso.getAsignacionPermisoList().stream().forEach(asig -> System.out.println(String.format("finicio: %s, ffin: %s", asig.getPermiso().getFechaInicio(), asig.getPermiso().getFechaFin())));
+        listado.addAll(permiso.getAsignacionPermisoList());
+        totalPaginas = 1;
         tblTabla.packAll();
     }
 
@@ -1255,7 +1282,7 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
             }
         }
 
-            //Traemos los permisos por dni
+        //Traemos los permisos por dni
         if (radHora.isSelected()) {
             Date horaInicio = (Date) spHoraInicio.getValue();
             Date horaFin = (Date) spHoraFin.getValue();
@@ -1266,7 +1293,7 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
             Permiso paraComprobar = this.controlador.getSeleccionado();
             for (AsignacionPermiso asignacion : paraComprobar.getAsignacionPermisoList()) {
                 List<AsignacionPermiso> lista = ac.buscarXHora(asignacion.getEmpleado(), fechaInicio);
-                
+
                 Long conteoPorHora = lista.stream().filter(perm -> (horaInicio.compareTo(perm.getPermiso().getHoraInicio()) <= 0 && horaFin.compareTo(perm.getPermiso().getHoraInicio()) >= 0)
                         || (perm.getPermiso().getHoraInicio().compareTo(horaInicio) <= 0 && perm.getPermiso().getHoraFin().compareTo(horaInicio) >= 0)).count();
                 if (conteoPorHora.intValue() == 0) {
@@ -1305,6 +1332,15 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         lblBusqueda.setBusy(true);
         paginaActual = 1;
         buscar();
+        actualizarControlesNavegacion();
+        lblBusqueda.setBusy(false);
+    }
+
+    private void busqueda(Permiso permiso) {
+        System.out.println("BUSCAR");
+        lblBusqueda.setBusy(true);
+        paginaActual = 1;
+        buscar(permiso);
         actualizarControlesNavegacion();
         lblBusqueda.setBusy(false);
     }

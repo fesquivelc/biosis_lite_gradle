@@ -40,13 +40,13 @@ public class MTAsignacionPermiso extends ModeloTabla<AsignacionPermiso> {
             case 2:
                 return clase(asignacion.getPermiso().getTipoPermiso().getClase());
             case 3:
-                if (asignacion.getPermiso().isPorFecha()) {
+                if (asignacion.getPermiso().getOpcion() == 'F') {
                     return dfFecha.format(asignacion.getPermiso().getFechaInicio());
                 } else {
                     return dfFecha.format(asignacion.getPermiso().getFechaInicio()) + " " + dfHora.format(asignacion.getPermiso().getHoraInicio());
                 }
             case 4:
-                if (asignacion.getPermiso().isPorFecha()) {
+                if (asignacion.getPermiso().getOpcion() == 'F') {
                     return dfFecha.format(asignacion.getPermiso().getFechaFin());
                 } else {
                     return dfFecha.format(asignacion.getPermiso().getFechaInicio()) + " " + dfHora.format(asignacion.getPermiso().getHoraFin());

@@ -2,6 +2,8 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 mainClassName = 'com.biosis.biosislite.Main'
+//mainClassName = 'com.biosis.biosislite.vistas.dialogos.DlgPermisoCRU'
+//mainClassName = 'com.biosis.biosislite.utiles.FormGeneradorMarcacion'
 
 sourceCompatibility = '1.8'
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'

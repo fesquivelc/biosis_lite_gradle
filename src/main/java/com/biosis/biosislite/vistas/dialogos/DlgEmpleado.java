@@ -123,6 +123,7 @@ public class DlgEmpleado extends javax.swing.JDialog {
         gridBagConstraints.weightx = 0.1;
         jPanel1.add(txtBusqueda, gridBagConstraints);
 
+        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Search.png"))); // NOI18N
         btnBuscar.setText("Buscar");
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -192,7 +193,7 @@ public class DlgEmpleado extends javax.swing.JDialog {
         });
         pnlNavegacion.add(btnAnterior);
 
-        spPagina.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(1), Integer.valueOf(1), null, Integer.valueOf(1)));
+        spPagina.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
         spPagina.setMinimumSize(new java.awt.Dimension(60, 20));
         spPagina.setPreferredSize(new java.awt.Dimension(60, 20));
         spPagina.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -247,14 +248,14 @@ public class DlgEmpleado extends javax.swing.JDialog {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 883, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 570, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 477, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

@@ -16,6 +16,7 @@ import javax.swing.UnsupportedLookAndFeelException;
  * @author fesquivelc
  */
 public class Main {
+
     public static String APLICACION_TITULO = "";
     public static String APLICACION_FONDO = "";
     public static String LOGIN_TITULO = "";
@@ -24,7 +25,7 @@ public class Main {
     public static String REPORTE_INSTITUCION = "";
     public static String REPORTE_RUC = "";
     public static String REPORTE_LOGO = "";
-    
+
     public static void main(String[] args) {
         // TODO code application logic here
         try {
@@ -37,6 +38,15 @@ public class Main {
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
 
         }
+
+//        System.setProperty(
+//                "Quaqua.tabLayoutPolicy", "wrap"
+//        );
+//        try {
+//            UIManager.setLookAndFeel(ch.randelshofer.quaqua.QuaquaManager.getLookAndFeel());
+//        } catch (Exception e) {
+//
+//        }
         Properties props = PropertiesUtil.cargarProperties("config/interfaz.properties");
         APLICACION_TITULO = props.getProperty("aplicacion_titulo");
         LOGIN_TITULO = props.getProperty("login_titulo");
@@ -48,7 +58,7 @@ public class Main {
         REPORTE_RUC = props.getProperty("reporte_ruc");
         DlgLogin principal = new DlgLogin(null, true);
         principal.setVisible(true);
-        
+
     }
 
 }
