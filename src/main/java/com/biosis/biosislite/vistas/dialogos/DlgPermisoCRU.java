@@ -5,6 +5,7 @@
  */
 package com.biosis.biosislite.vistas.dialogos;
 
+import com.biosis.biosislite.Main;
 import com.biosis.biosislite.controladores.Controlador;
 import com.biosis.biosislite.controladores.PermisoControlador;
 import com.biosis.biosislite.controladores.TipoPermisoControlador;
@@ -13,13 +14,18 @@ import com.biosis.biosislite.entidades.Permiso;
 import com.biosis.biosislite.entidades.TipoPermiso;
 import com.biosis.biosislite.entidades.escalafon.Empleado;
 import com.biosis.biosislite.utiles.HerramientaGeneral;
+import com.biosis.biosislite.utiles.UsuarioActivo;
 import com.personal.utiles.FormularioUtil;
+import com.personal.utiles.ReporteUtil;
 import java.awt.Component;
+import java.io.File;
 import java.math.BigDecimal;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListCellRenderer;
@@ -50,6 +56,7 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
     private final PermisoControlador permc = new PermisoControlador();
     private final TipoPermisoControlador tpermc = new TipoPermisoControlador();
     private boolean accionRealizada = false;
+    private final ReporteUtil reporteador = new ReporteUtil();
 
     public DlgPermisoCRU(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
@@ -96,6 +103,7 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
         btnGuardar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
+        btnImprimir = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -170,6 +178,15 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
             }
         });
         jPanel2.add(btnEliminar);
+
+        btnImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Print_16x16.png"))); // NOI18N
+        btnImprimir.setText("imprimir");
+        btnImprimir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnImprimirActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnImprimir);
 
         btnCancelar.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Cancel_16x16.png"))); // NOI18N
@@ -471,7 +488,30 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         // TODO add your handling code here:
+        this.accion = Controlador.ELIMINAR;
+        if(JOptionPane.showConfirmDialog(this, "¿Está seguro que desea eliminar este permiso?", "Mensaje del sistema", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
+            if(this.permc.accion(accion)){
+                FormularioUtil.mensajeExito(this, accion);
+                this.permiso = null;
+                this.dispose();
+            }
+        }
     }//GEN-LAST:event_btnEliminarActionPerformed
+
+    private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
+        // TODO add your handling code here:
+        File reporte = Main.FICHERO_REPORTE_SALIDA;
+//        List<Long> lista = new ArrayList<>();
+
+        Map<String, Object> parametros = new HashMap<>();
+        parametros.put("permiso_id", this.permiso.getId());
+        parametros.put("por_lote", true);
+        parametros.put("reporte_ususario", UsuarioActivo.getUsuario().getLogin());
+        parametros.put("reporte_institucion", Main.REPORTE_INSTITUCION);
+
+        reporteador.setConn(permc.getDao().getConexion());
+        reporteador.generarReporte(reporte, parametros, JOptionPane.getFrameForComponent(this));
+    }//GEN-LAST:event_btnImprimirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -522,6 +562,7 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton btnImprimir;
     private javax.swing.JButton btnQuitar;
     private javax.swing.JComboBox cboTipoPermiso;
     private javax.swing.ButtonGroup grupoOpcion;
@@ -643,6 +684,7 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
         this.btnEliminar.setVisible(leerModificar);
         this.btnGuardar.setVisible(nuevoModificar);
         this.pnlAccionesEmpleado.setVisible(nuevoModificar);
+        this.btnImprimir.setVisible(leer);
         
         this.cboTipoPermiso.setEnabled(!leer);
         this.txtDocumento.setEditable(!leer);

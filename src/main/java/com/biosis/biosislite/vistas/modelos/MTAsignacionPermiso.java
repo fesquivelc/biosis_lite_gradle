@@ -38,7 +38,7 @@ public class MTAsignacionPermiso extends ModeloTabla<AsignacionPermiso> {
 
                 return asignacion.getPermiso().getDocumento();
             case 2:
-                return clase(asignacion.getPermiso().getTipoPermiso().getClase());
+                return asignacion.getPermiso().getTipoPermiso().getNombre();
             case 3:
                 if (asignacion.getPermiso().getOpcion() == 'F') {
                     return dfFecha.format(asignacion.getPermiso().getFechaInicio());

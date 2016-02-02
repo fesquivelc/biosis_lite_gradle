@@ -7,6 +7,7 @@ package com.biosis.biosislite;
 
 import com.biosis.biosislite.vistas.dialogos.DlgLogin;
 import com.personal.utiles.PropertiesUtil;
+import java.io.File;
 import java.util.Properties;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -25,6 +26,8 @@ public class Main {
     public static String REPORTE_INSTITUCION = "";
     public static String REPORTE_RUC = "";
     public static String REPORTE_LOGO = "";
+    
+    public static File FICHERO_REPORTE_SALIDA;
 
     public static void main(String[] args) {
         // TODO code application logic here
@@ -48,6 +51,7 @@ public class Main {
 //
 //        }
         Properties props = PropertiesUtil.cargarProperties("config/interfaz.properties");
+        Properties recursos = PropertiesUtil.cargarProperties("config/recursos.properties");
         APLICACION_TITULO = props.getProperty("aplicacion_titulo");
         LOGIN_TITULO = props.getProperty("login_titulo");
         LOGIN_SUBTITULO = props.getProperty("login_subtitulo");
@@ -56,6 +60,8 @@ public class Main {
         REPORTE_INSTITUCION = props.getProperty("reporte_institucion");
         REPORTE_LOGO = props.getProperty("reporte_logo");
         REPORTE_RUC = props.getProperty("reporte_ruc");
+        
+        FICHERO_REPORTE_SALIDA = new File(recursos.getProperty("reporte_permisos"));
         DlgLogin principal = new DlgLogin(null, true);
         principal.setVisible(true);
 
