@@ -7,19 +7,16 @@ package com.biosis.biosislite.vistas.dialogos;
 
 import com.biosis.biosislite.Main;
 import com.biosis.biosislite.controladores.Controlador;
-import com.biosis.biosislite.controladores.PermisoControlador;
 import com.biosis.biosislite.controladores.TipoPermisoControlador;
+import com.biosis.biosislite.controladores.VacacionControlador;
 import com.biosis.biosislite.entidades.AsignacionPermiso;
-import com.biosis.biosislite.entidades.Permiso;
-import com.biosis.biosislite.entidades.TipoPermiso;
+import com.biosis.biosislite.entidades.Vacacion;
 import com.biosis.biosislite.entidades.escalafon.Empleado;
 import com.biosis.biosislite.utiles.HerramientaGeneral;
 import com.biosis.biosislite.utiles.UsuarioActivo;
 import com.personal.utiles.FormularioUtil;
 import com.personal.utiles.ReporteUtil;
-import java.awt.Component;
 import java.io.File;
-import java.math.BigDecimal;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -28,15 +25,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.DefaultListCellRenderer;
 import javax.swing.JInternalFrame;
-import javax.swing.JList;
 import javax.swing.JOptionPane;
+import javax.swing.SwingWorker;
 import javax.swing.text.MaskFormatter;
 import org.jdesktop.beansbinding.AutoBinding;
 import org.jdesktop.beansbinding.BeanProperty;
 import org.jdesktop.observablecollections.ObservableCollections;
-import org.jdesktop.swingbinding.JComboBoxBinding;
 import org.jdesktop.swingbinding.JTableBinding;
 import org.jdesktop.swingbinding.SwingBindings;
 
@@ -44,43 +39,42 @@ import org.jdesktop.swingbinding.SwingBindings;
  *
  * @author Francis
  */
-public class DlgPermisoCRU extends javax.swing.JDialog {
+public class DlgVacacionCRUD extends javax.swing.JDialog {
 
     /**
      * Creates new form DlgPermisoCRU
      */
     private List<AsignacionPermiso> asignacionList;
-    private List<TipoPermiso> tipoPermisoList;
-    private Permiso permiso;
+    private Vacacion vacacion;
     private int accion;
-    private final PermisoControlador permc = new PermisoControlador();
+    private final VacacionControlador vacc = new VacacionControlador();
     private final TipoPermisoControlador tpermc = new TipoPermisoControlador();
     private boolean accionRealizada = false;
     private final ReporteUtil reporteador = new ReporteUtil();
+    private boolean tieneReprogramacion = false;
+    private Empleado empleadoSeleccionado;
 
-    public DlgPermisoCRU(java.awt.Frame parent, boolean modal) {
+    public DlgVacacionCRUD(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         iniciarMascara();
         initComponents();
-        
-        spinners();
+
         bindeoSalvaje();
-        permc.prepararCrear();
-        this.permiso = permc.getSeleccionado();
+        vacc.prepararCrear();
+        this.vacacion = vacc.getSeleccionado();
         this.accion = Controlador.NUEVO;
-        inicializar(permiso, accion);
+        inicializar(vacacion, accion);
     }
 
-    public DlgPermisoCRU(JInternalFrame parent, Permiso permiso, int accion) {
+    public DlgVacacionCRUD(JInternalFrame parent, Vacacion vacacion, int accion) {
         super(JOptionPane.getFrameForComponent(parent), true);
         iniciarMascara();
         initComponents();
-        spinners();
         bindeoSalvaje();
-        this.permiso = permiso;
-        this.accion = accion;
-        inicializar(permiso, accion);
-        
+        this.vacacion = vacacion;
+        this.accion = comprobarAccion(vacacion, accion);
+        inicializar(vacacion, accion);
+
         this.setLocationRelativeTo(parent);
     }
 
@@ -94,10 +88,8 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jEditorPane1 = new javax.swing.JEditorPane();
-        grupoOpcion = new javax.swing.ButtonGroup();
-        jPanel1 = new javax.swing.JPanel();
+        pnlPrincipal = new javax.swing.JTabbedPane();
+        pnlMantenimiento = new javax.swing.JPanel();
         lblTitulo = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnGuardar = new javax.swing.JButton();
@@ -106,49 +98,46 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
         btnImprimir = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        cboTipoPermiso = new javax.swing.JComboBox();
         txtDocumento = new javax.swing.JTextField();
-        txtMotivo = new javax.swing.JTextField();
-        pnlOpcion = new javax.swing.JPanel();
-        radFecha = new javax.swing.JRadioButton();
-        radHora = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        txtPeriodo = new javax.swing.JLabel();
         pnlFin = new javax.swing.JPanel();
         txtFechaFin = new javax.swing.JFormattedTextField(this.mascaraFecha);
-        jLabel7 = new javax.swing.JLabel();
-        spHoraFin = new javax.swing.JSpinner();
         pnlInicio = new javax.swing.JPanel();
         txtFechaInicio = new javax.swing.JFormattedTextField(this.mascaraFecha);
-        jLabel8 = new javax.swing.JLabel();
-        spHoraInicio = new javax.swing.JSpinner();
-        pnlEmpleados = new javax.swing.JPanel();
+        pnlPeriodo = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblEmpleado = new javax.swing.JTable();
+        tblPeriodo = new javax.swing.JTable();
         pnlAccionesEmpleado = new javax.swing.JPanel();
-        btnAnadir = new javax.swing.JButton();
-        btnQuitar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-
-        jScrollPane2.setViewportView(jEditorPane1);
-
-        grupoOpcion.add(radFecha);
-        grupoOpcion.add(radHora);
+        lblCargandoPeriodo = new org.jdesktop.swingx.JXBusyLabel();
+        btnHistorial = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        txtEmpleadoNombre = new javax.swing.JTextField();
+        btnEmpleados = new javax.swing.JButton();
+        lblAvisoReprogramacion = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        lblPeriodo = new javax.swing.JLabel();
+        pnlInterrupcionReprogramacion = new javax.swing.JPanel();
+        pnlInterrupcion = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jXTable1 = new org.jdesktop.swingx.JXTable();
+        pnlReprogramacion = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jXTable2 = new org.jdesktop.swingx.JXTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Gestión de permisos");
+        setTitle("Gestión de vacaciones");
 
-        jPanel1.setLayout(new java.awt.BorderLayout(0, 5));
+        pnlMantenimiento.setLayout(new java.awt.BorderLayout(0, 5));
 
         lblTitulo.setBackground(new java.awt.Color(204, 204, 255));
         lblTitulo.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitulo.setText("Asignar Permiso");
+        lblTitulo.setText("Asignar vacación");
         lblTitulo.setOpaque(true);
-        jPanel1.add(lblTitulo, java.awt.BorderLayout.PAGE_START);
+        pnlMantenimiento.add(lblTitulo, java.awt.BorderLayout.PAGE_START);
 
         btnGuardar.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Save_16x16.png"))); // NOI18N
@@ -180,6 +169,7 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
         });
         jPanel2.add(btnEliminar);
 
+        btnImprimir.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         btnImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Print_16x16.png"))); // NOI18N
         btnImprimir.setText("imprimir");
         btnImprimir.addActionListener(new java.awt.event.ActionListener() {
@@ -199,7 +189,7 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
         });
         jPanel2.add(btnCancelar);
 
-        jPanel1.add(jPanel2, java.awt.BorderLayout.PAGE_END);
+        pnlMantenimiento.add(jPanel2, java.awt.BorderLayout.PAGE_END);
 
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         java.awt.GridBagLayout jPanel3Layout = new java.awt.GridBagLayout();
@@ -207,128 +197,51 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
         jPanel3Layout.rowHeights = new int[] {0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0};
         jPanel3.setLayout(jPanel3Layout);
 
-        jLabel2.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        jLabel2.setText("Tipo de permiso:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel3.add(jLabel2, gridBagConstraints);
-
         jLabel3.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         jLabel3.setText("Documento:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel3.add(jLabel3, gridBagConstraints);
-
-        jLabel4.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        jLabel4.setText("Motivo:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel3.add(jLabel4, gridBagConstraints);
-
-        cboTipoPermiso.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        cboTipoPermiso.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 0.1;
-        jPanel3.add(cboTipoPermiso, gridBagConstraints);
+        jPanel3.add(jLabel3, gridBagConstraints);
 
         txtDocumento.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 0.1;
         jPanel3.add(txtDocumento, gridBagConstraints);
 
-        txtMotivo.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 0.1;
-        jPanel3.add(txtMotivo, gridBagConstraints);
-
-        pnlOpcion.setLayout(new javax.swing.BoxLayout(pnlOpcion, javax.swing.BoxLayout.LINE_AXIS));
-
-        radFecha.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        radFecha.setSelected(true);
-        radFecha.setText("Por fecha");
-        radFecha.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                radFechaStateChanged(evt);
-            }
-        });
-        radFecha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radFechaActionPerformed(evt);
-            }
-        });
-        pnlOpcion.add(radFecha);
-
-        radHora.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        radHora.setText("Por hora");
-        radHora.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                radHoraStateChanged(evt);
-            }
-        });
-        radHora.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radHoraActionPerformed(evt);
-            }
-        });
-        pnlOpcion.add(radHora);
-
+        jLabel5.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        jLabel5.setText("Fecha de inicio:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 3;
-        jPanel3.add(pnlOpcion, gridBagConstraints);
-
-        jLabel5.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        jLabel5.setText("Fecha / Hora de inicio:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 8;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         jPanel3.add(jLabel5, gridBagConstraints);
 
-        jLabel6.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        jLabel6.setText("Fecha / Hora de fin:");
+        txtPeriodo.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        txtPeriodo.setText("2014-2015");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 10;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel3.add(jLabel6, gridBagConstraints);
+        jPanel3.add(txtPeriodo, gridBagConstraints);
 
         pnlFin.setLayout(new java.awt.GridBagLayout());
 
         txtFechaFin.setColumns(10);
         txtFechaFin.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txtFechaFin.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        pnlFin.add(txtFechaFin, new java.awt.GridBagConstraints());
-
-        jLabel7.setText(" / ");
-        pnlFin.add(jLabel7, new java.awt.GridBagConstraints());
-
-        spHoraFin.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        spHoraFin.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(1453266000000L), null, null, java.util.Calendar.DAY_OF_MONTH));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         gridBagConstraints.weightx = 0.1;
-        pnlFin.add(spHoraFin, gridBagConstraints);
+        pnlFin.add(txtFechaFin, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridy = 8;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         jPanel3.add(pnlFin, gridBagConstraints);
@@ -338,29 +251,22 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
         txtFechaInicio.setColumns(10);
         txtFechaInicio.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txtFechaInicio.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        pnlInicio.add(txtFechaInicio, new java.awt.GridBagConstraints());
-
-        jLabel8.setText(" / ");
-        pnlInicio.add(jLabel8, new java.awt.GridBagConstraints());
-
-        spHoraInicio.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        spHoraInicio.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(1453266000000L), null, null, java.util.Calendar.DAY_OF_MONTH));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         gridBagConstraints.weightx = 0.1;
-        pnlInicio.add(spHoraInicio, gridBagConstraints);
+        pnlInicio.add(txtFechaInicio, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridy = 6;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         jPanel3.add(pnlInicio, gridBagConstraints);
 
-        pnlEmpleados.setBorder(javax.swing.BorderFactory.createTitledBorder("Empleados"));
-        pnlEmpleados.setLayout(new java.awt.BorderLayout(0, 5));
+        pnlPeriodo.setBorder(javax.swing.BorderFactory.createTitledBorder("Selección de período"));
+        pnlPeriodo.setLayout(new java.awt.BorderLayout(0, 5));
 
-        tblEmpleado.setModel(new javax.swing.table.DefaultTableModel(
+        tblPeriodo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -371,37 +277,22 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(tblEmpleado);
+        jScrollPane1.setViewportView(tblPeriodo);
 
-        pnlEmpleados.add(jScrollPane1, java.awt.BorderLayout.CENTER);
+        pnlPeriodo.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
         pnlAccionesEmpleado.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 0));
 
-        btnAnadir.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        btnAnadir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Add.png"))); // NOI18N
-        btnAnadir.setText("Añadir");
-        btnAnadir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAnadirActionPerformed(evt);
-            }
-        });
-        pnlAccionesEmpleado.add(btnAnadir);
+        lblCargandoPeriodo.setText("Cargando saldos vacacionales");
+        lblCargandoPeriodo.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        pnlAccionesEmpleado.add(lblCargandoPeriodo);
 
-        btnQuitar.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        btnQuitar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/minus-16.png"))); // NOI18N
-        btnQuitar.setText("Quitar");
-        btnQuitar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnQuitarActionPerformed(evt);
-            }
-        });
-        pnlAccionesEmpleado.add(btnQuitar);
+        btnHistorial.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        btnHistorial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Find_16x16.png"))); // NOI18N
+        btnHistorial.setText("Ver historial");
+        pnlAccionesEmpleado.add(btnHistorial);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Find_16x16.png"))); // NOI18N
-        jButton1.setText("Ver marcaciones");
-        pnlAccionesEmpleado.add(jButton1);
-
-        pnlEmpleados.add(pnlAccionesEmpleado, java.awt.BorderLayout.PAGE_START);
+        pnlPeriodo.add(pnlAccionesEmpleado, java.awt.BorderLayout.PAGE_START);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -410,9 +301,114 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 0.2;
         gridBagConstraints.weighty = 0.1;
-        jPanel3.add(pnlEmpleados, gridBagConstraints);
+        jPanel3.add(pnlPeriodo, gridBagConstraints);
 
-        jPanel1.add(jPanel3, java.awt.BorderLayout.CENTER);
+        jLabel1.setText("Empleado:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel3.add(jLabel1, gridBagConstraints);
+
+        jPanel4.setLayout(new java.awt.GridBagLayout());
+
+        txtEmpleadoNombre.setEditable(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 0.1;
+        jPanel4.add(txtEmpleadoNombre, gridBagConstraints);
+
+        btnEmpleados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/User_16x16.png"))); // NOI18N
+        btnEmpleados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEmpleadosActionPerformed(evt);
+            }
+        });
+        jPanel4.add(btnEmpleados, new java.awt.GridBagConstraints());
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 0.1;
+        jPanel3.add(jPanel4, gridBagConstraints);
+
+        lblAvisoReprogramacion.setBackground(new java.awt.Color(255, 255, 204));
+        lblAvisoReprogramacion.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        lblAvisoReprogramacion.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblAvisoReprogramacion.setText("Aviso: Esta vacación no es susceptible a cambios debido a que ha sido reprogramada");
+        lblAvisoReprogramacion.setOpaque(true);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel3.add(lblAvisoReprogramacion, gridBagConstraints);
+
+        jLabel7.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        jLabel7.setText("Fecha de fin:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel3.add(jLabel7, gridBagConstraints);
+
+        lblPeriodo.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        lblPeriodo.setText("Período:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel3.add(lblPeriodo, gridBagConstraints);
+
+        pnlMantenimiento.add(jPanel3, java.awt.BorderLayout.CENTER);
+
+        pnlPrincipal.addTab("Mantenimiento", pnlMantenimiento);
+
+        pnlInterrupcionReprogramacion.setLayout(new java.awt.GridLayout(0, 1));
+
+        pnlInterrupcion.setBorder(javax.swing.BorderFactory.createTitledBorder("Interrupciones"));
+        pnlInterrupcion.setLayout(new java.awt.BorderLayout());
+
+        jXTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jXTable1);
+
+        pnlInterrupcion.add(jScrollPane2, java.awt.BorderLayout.CENTER);
+
+        pnlInterrupcionReprogramacion.add(pnlInterrupcion);
+
+        pnlReprogramacion.setBorder(javax.swing.BorderFactory.createTitledBorder("Reprogramación"));
+        pnlReprogramacion.setLayout(new java.awt.BorderLayout());
+
+        jXTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(jXTable2);
+
+        pnlReprogramacion.add(jScrollPane3, java.awt.BorderLayout.CENTER);
+
+        pnlInterrupcionReprogramacion.add(pnlReprogramacion);
+
+        pnlPrincipal.addTab("Reprogramación / interrupciones", pnlInterrupcionReprogramacion);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -420,48 +416,30 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 658, Short.MAX_VALUE)
+                .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 441, Short.MAX_VALUE)
+                .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 444, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAnadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnadirActionPerformed
-        // TODO add your handling code here:
-        DlgEmpleado dlgEmpleado = new DlgEmpleado(this);
-        Empleado empleado = dlgEmpleado.getSeleccionado();
-        if (empleado != null) {
-            long conteo = asignacionList.stream().filter(a -> a.getEmpleado().equals(empleado)).count();
-
-            if (conteo == 0) {
-                AsignacionPermiso asignacion = new AsignacionPermiso();
-                asignacion.setPermiso(permiso);
-                asignacion.setEmpleado(empleado);
-                asignacionList.add(asignacion);
-                permc.getSeleccionado().getAsignacionPermisoList().add(asignacion);
-            }
-        }
-        System.out.println("EMPLEADO: " + empleado.getNombreCompleto());
-    }//GEN-LAST:event_btnAnadirActionPerformed
-
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         // TODO add your handling code here:
-        volcarData(permc.getSeleccionado());
+        volcarData(vacc.getSeleccionado());
 
-        if (permc.accion(accion)) {
+        if (vacc.accion(accion)) {
             FormularioUtil.mensajeExito(this, accion);
             this.accionRealizada = true;
             this.dispose();
-            
-        }else{
+
+        } else {
             FormularioUtil.mensajeError(this, accion);
         }
     }//GEN-LAST:event_btnGuardarActionPerformed
@@ -471,39 +449,19 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
         this.dispose();
     }//GEN-LAST:event_btnCancelarActionPerformed
 
-    private void btnQuitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuitarActionPerformed
-        // TODO add your handling code here:
-        int fila = tblEmpleado.getSelectedRow();
-        if (fila != -1) {
-            AsignacionPermiso asignacion = asignacionList.get(fila);
-            permc.getSeleccionado().getAsignacionPermisoList().remove(asignacion);
-            asignacionList.remove(asignacion);
-        }
-    }//GEN-LAST:event_btnQuitarActionPerformed
-
-    private void radFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radFechaActionPerformed
-        // TODO add your handling code here:
-        checkOpciones();
-    }//GEN-LAST:event_radFechaActionPerformed
-
-    private void radHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radHoraActionPerformed
-        // TODO add your handling code here:
-        checkOpciones();
-    }//GEN-LAST:event_radHoraActionPerformed
-
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
         // TODO add your handling code here:
         this.accion = Controlador.MODIFICAR;
-        inicializar(permiso, accion);
+        inicializar(vacacion, accion);
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         // TODO add your handling code here:
         this.accion = Controlador.ELIMINAR;
-        if(JOptionPane.showConfirmDialog(this, "¿Está seguro que desea eliminar este permiso?", "Mensaje del sistema", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
-            if(this.permc.accion(accion)){
+        if (JOptionPane.showConfirmDialog(this, "¿Está seguro que desea eliminar este permiso?", "Mensaje del sistema", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+            if (this.vacc.accion(accion)) {
                 FormularioUtil.mensajeExito(this, accion);
-                this.permiso = null;
+                this.vacacion = null;
                 this.dispose();
             }
         }
@@ -515,24 +473,25 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
 //        List<Long> lista = new ArrayList<>();
 
         Map<String, Object> parametros = new HashMap<>();
-        parametros.put("permiso_id", this.permiso.getId());
+        parametros.put("permiso_id", this.vacacion.getId());
         parametros.put("por_lote", true);
         parametros.put("reporte_ususario", UsuarioActivo.getUsuario().getLogin());
         parametros.put("reporte_institucion", Main.REPORTE_INSTITUCION);
 
-        reporteador.setConn(permc.getDao().getConexion());
+        reporteador.setConn(vacc.getDao().getConexion());
         reporteador.generarReporte(reporte, parametros, JOptionPane.getFrameForComponent(this));
     }//GEN-LAST:event_btnImprimirActionPerformed
 
-    private void radFechaStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_radFechaStateChanged
+    private void btnEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmpleadosActionPerformed
         // TODO add your handling code here:
-        checkOpciones();
-    }//GEN-LAST:event_radFechaStateChanged
-
-    private void radHoraStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_radHoraStateChanged
-        // TODO add your handling code here:
-        checkOpciones();
-    }//GEN-LAST:event_radHoraStateChanged
+        DlgEmpleado dlgEmpleado = new DlgEmpleado(this);
+        Empleado empleado = dlgEmpleado.getSeleccionado();
+        if (empleado != null) {
+            txtEmpleadoNombre.setText(empleado.getNombreCompleto());
+            PeriodoWorker periodo = new PeriodoWorker();
+            periodo.execute();
+        }
+    }//GEN-LAST:event_btnEmpleadosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -551,22 +510,26 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DlgPermisoCRU.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DlgVacacionCRUD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DlgPermisoCRU.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DlgVacacionCRUD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DlgPermisoCRU.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DlgVacacionCRUD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DlgPermisoCRU.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DlgVacacionCRUD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
-        PermisoControlador permc = new PermisoControlador();
-        Permiso permiso = permc.buscarPorId((7L));
+        VacacionControlador vacc = new VacacionControlador();
+//        Vacacion vacacion = vacc.buscarPorId(2L);
+        vacc.prepararCrear();
+        Vacacion vacacion = vacc.getSeleccionado();
         java.awt.EventQueue.invokeLater(() -> {
-            DlgPermisoCRU dialog = new DlgPermisoCRU(new javax.swing.JInternalFrame(), permiso, Controlador.LEER);
+            DlgVacacionCRUD dialog = new DlgVacacionCRUD(new javax.swing.JInternalFrame(), vacacion, Controlador.NUEVO);
             dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                 @Override
                 public void windowClosing(java.awt.event.WindowEvent e) {
@@ -578,52 +541,47 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAnadir;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnEmpleados;
     private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton btnHistorial;
     private javax.swing.JButton btnImprimir;
-    private javax.swing.JButton btnQuitar;
-    private javax.swing.JComboBox cboTipoPermiso;
-    private javax.swing.ButtonGroup grupoOpcion;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JEditorPane jEditorPane1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private org.jdesktop.swingx.JXTable jXTable1;
+    private org.jdesktop.swingx.JXTable jXTable2;
+    private javax.swing.JLabel lblAvisoReprogramacion;
+    private org.jdesktop.swingx.JXBusyLabel lblCargandoPeriodo;
+    private javax.swing.JLabel lblPeriodo;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel pnlAccionesEmpleado;
-    private javax.swing.JPanel pnlEmpleados;
     private javax.swing.JPanel pnlFin;
     private javax.swing.JPanel pnlInicio;
-    private javax.swing.JPanel pnlOpcion;
-    private javax.swing.JRadioButton radFecha;
-    private javax.swing.JRadioButton radHora;
-    private javax.swing.JSpinner spHoraFin;
-    private javax.swing.JSpinner spHoraInicio;
-    private javax.swing.JTable tblEmpleado;
+    private javax.swing.JPanel pnlInterrupcion;
+    private javax.swing.JPanel pnlInterrupcionReprogramacion;
+    private javax.swing.JPanel pnlMantenimiento;
+    private javax.swing.JPanel pnlPeriodo;
+    private javax.swing.JTabbedPane pnlPrincipal;
+    private javax.swing.JPanel pnlReprogramacion;
+    private javax.swing.JTable tblPeriodo;
     private javax.swing.JTextField txtDocumento;
+    private javax.swing.JTextField txtEmpleadoNombre;
     private javax.swing.JFormattedTextField txtFechaFin;
     private javax.swing.JFormattedTextField txtFechaInicio;
-    private javax.swing.JTextField txtMotivo;
+    private javax.swing.JLabel txtPeriodo;
     // End of variables declaration//GEN-END:variables
 
     private MaskFormatter mascaraFecha;
-
-    private void spinners() {
-        FormularioUtil.modeloSpinnerFechaHora(spHoraInicio, "HH:mm");
-        FormularioUtil.modeloSpinnerFechaHora(spHoraFin, "HH:mm");
-    }
 
     private void iniciarMascara() {
         try {
@@ -631,7 +589,7 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
             this.mascaraFecha.setPlaceholderCharacter('_');
 //            this.mascara.setInvalidCharacters("A'");
         } catch (ParseException ex) {
-            Logger.getLogger(DlgPermisoCRU.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DlgVacacionCRUD.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -640,147 +598,135 @@ public class DlgPermisoCRU extends javax.swing.JDialog {
     EDITAR = campos llenos con lo que existe del permiso
     VER = campos llenos con lo que existe en el permiso sin capacidad de editar
      */
-    private void inicializar(Permiso permiso, int accion) {
+    private void inicializar(Vacacion vacacion, int accion) {
         switch (accion) {
             case Controlador.NUEVO:
-                
-                lblTitulo.setText("Generar permiso");
+
+                lblTitulo.setText("Asignar vacaciones");
                 btnCancelar.setText("Cancelar");
                 break;
             case Controlador.MODIFICAR:
-                lblTitulo.setText("Modificar permiso");
+                lblTitulo.setText("Modificar vacaciones");
                 btnCancelar.setText("Cancelar");
                 break;
             case Controlador.LEER:
-                lblTitulo.setText("Ver permiso");
+                lblTitulo.setText("Ver vacaciones");
                 btnCancelar.setText("Cerrar");
                 break;
         }
 
-        permc.setSeleccionado(permiso);
-        
+        vacc.setSeleccionado(vacacion);
+
         inicializarControles(accion);
         if (accion == Controlador.MODIFICAR || accion == Controlador.LEER) {
-            llenarCampos(permiso);
-        }
-        
-        if(accion != Controlador.LEER){
-            checkOpciones();
+            llenarCampos(vacacion);
         }
 
     }
 
     private void bindeoSalvaje() {
         asignacionList = ObservableCollections.observableList(new ArrayList<AsignacionPermiso>());
-        tipoPermisoList = tpermc.buscarTodos();
         BeanProperty pDocumento = BeanProperty.create("empleado.nroDocumento");
         BeanProperty pNombreCompleto = BeanProperty.create("empleado.nombreCompleto");
 
-        JTableBinding bindTable = SwingBindings.createJTableBinding(AutoBinding.UpdateStrategy.READ, asignacionList, tblEmpleado);
+        JTableBinding bindTable = SwingBindings.createJTableBinding(AutoBinding.UpdateStrategy.READ, asignacionList, tblPeriodo);
         bindTable.addColumnBinding(pDocumento).setColumnName("DNI").setEditable(false);
         bindTable.addColumnBinding(pNombreCompleto).setColumnName("Apellidos y nombres").setEditable(false);
 
-        JComboBoxBinding bindCombo = SwingBindings.createJComboBoxBinding(AutoBinding.UpdateStrategy.READ, tipoPermisoList, cboTipoPermiso);
-
-        bindCombo.bind();
         bindTable.bind();
 
-        cboTipoPermiso.setRenderer(new DefaultListCellRenderer() {
-            @Override
-            public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
-                if (value instanceof TipoPermiso) {
-                    value = ((TipoPermiso) value).getNombre();
-                }
-                return super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-            }
-        });
     }
 
     private void inicializarControles(int accion) {
         boolean leer = accion == Controlador.LEER;
+        boolean nuevo = accion == Controlador.NUEVO;
         boolean leerModificar = accion == Controlador.LEER || accion == Controlador.MODIFICAR;
         boolean nuevoModificar = accion == Controlador.NUEVO || accion == Controlador.MODIFICAR;
-
-        this.btnEditar.setVisible(accion == Controlador.LEER);
-        this.btnEliminar.setVisible(leerModificar);
-        this.btnGuardar.setVisible(nuevoModificar);
-        this.pnlAccionesEmpleado.setVisible(nuevoModificar);
-        this.btnImprimir.setVisible(leer);
         
-        this.cboTipoPermiso.setEnabled(!leer);
+        this.lblCargandoPeriodo.setVisible(false);
+
+        this.btnEditar.setVisible(accion == Controlador.LEER && !tieneReprogramacion);
+        this.btnEliminar.setVisible(leerModificar && !tieneReprogramacion);
+        this.btnGuardar.setVisible(nuevoModificar);
+        this.btnImprimir.setVisible(leer);
+        this.lblPeriodo.setVisible(leer);
+        this.txtPeriodo.setVisible(leer);
+        this.lblAvisoReprogramacion.setVisible(tieneReprogramacion);
+        this.pnlPeriodo.setVisible(nuevoModificar);
+        this.btnEmpleados.setVisible(nuevo);
+
         this.txtDocumento.setEditable(!leer);
-        this.txtMotivo.setEditable(!leer);
         this.txtFechaInicio.setEditable(!leer);
         this.txtFechaFin.setEditable(!leer);
-        this.spHoraInicio.setEnabled(!leer);
-        this.spHoraFin.setEnabled(!leer);
-        this.radFecha.setEnabled(!leer);
-        this.radHora.setEnabled(!leer);
     }
 
-    private void llenarCampos(Permiso permiso) {
-        this.txtDocumento.setText(permiso.getDocumento());
-        this.txtMotivo.setText(permiso.getMotivo());
-        this.cboTipoPermiso.setSelectedItem(permiso.getTipoPermiso());
-        
-        this.txtFechaInicio.setText(HerramientaGeneral.formatoFecha.format(permiso.getFechaInicio()));
-        this.txtFechaFin.setText(HerramientaGeneral.formatoFecha.format(permiso.getFechaFin()));
-        if(permiso.getOpcion() == 'H'){
-            this.radHora.setSelected(true);
-            this.spHoraInicio.setValue(permiso.getHoraInicio());
-            this.spHoraFin.setValue(permiso.getHoraFin());
-        }else{
-            this.radFecha.setSelected(true);
-            this.spHoraInicio.setValue(new Date(18000000));
-            this.spHoraFin.setValue(new Date(18000000));
+    private void llenarCampos(Vacacion vacacion) {
+
+        this.txtDocumento.setText(vacacion.getDocumento());
+        this.txtEmpleadoNombre.setText(vacacion.getEmpleado().getNombreCompleto());
+        this.txtFechaInicio.setText(HerramientaGeneral.formatoFecha.format(vacacion.getFechaInicio()));
+        this.txtFechaFin.setText(HerramientaGeneral.formatoFecha.format(vacacion.getFechaFin()));
+
+        if (this.accion == Controlador.LEER) {
+            int anio = vacacion.getPeriodo().getAnio();
+            txtPeriodo.setText(String.format("%s - %s", anio, (anio + 1)));
         }
-        
+
         this.asignacionList.clear();
-        this.asignacionList.addAll(permiso.getAsignacionPermisoList());
     }
 
-    private void volcarData(Permiso permiso) {
+    private void volcarData(Vacacion permiso) {
         try {
-            TipoPermiso tipoPermiso = (TipoPermiso) cboTipoPermiso.getSelectedItem();
             String strFechaInicio = this.txtFechaInicio.getText();
             String strFechaFin = this.txtFechaFin.getText();
             Date fechaInicio = HerramientaGeneral.formatoFecha.parse(strFechaInicio);
-            Date fechaFin = radHora.isSelected() ? fechaInicio : HerramientaGeneral.formatoFecha.parse(strFechaFin);
-
-            Date horaInicio = null;
-            Date horaFin = null;
-            if (radHora.isSelected()) {
-                horaInicio = (Date) spHoraInicio.getValue();
-                horaFin = (Date) spHoraFin.getValue();
-            }
+            Date fechaFin = HerramientaGeneral.formatoFecha.parse(strFechaFin);
 
             permiso.setFechaInicio(fechaInicio);
             permiso.setFechaFin(fechaFin);
             permiso.setDocumento(txtDocumento.getText());
-            permiso.setHoraInicio(horaInicio);
-            permiso.setHoraFin(horaFin);
-            permiso.setTipoPermiso(tipoPermiso);
-            permiso.setOpcion(radFecha.isSelected() ? 'F' : 'H');
-            permiso.setMotivo(txtMotivo.getText());
-            permiso.setDiferencia(BigDecimal.ZERO);
 
         } catch (ParseException ex) {
-            Logger.getLogger(DlgPermisoCRU.class.getName()).log(Level.SEVERE, null, ex.getCause().getMessage());
+            Logger.getLogger(DlgVacacionCRUD.class.getName()).log(Level.SEVERE, null, ex.getCause().getMessage());
         }
     }
 
-    private void checkOpciones() {
-        this.txtFechaFin.setEnabled(radFecha.isSelected());
-        this.spHoraInicio.setEnabled(radHora.isSelected());
-        this.spHoraFin.setEnabled(radHora.isSelected());
-    }
-
-    public Permiso getPermiso() {
-        return permiso;
+    public Vacacion getVacacion() {
+        return vacacion;
     }
 
     public boolean isAccionRealizada() {
         return accionRealizada;
     }
-        
+
+    private int comprobarAccion(Vacacion vacacion, int accion) {
+
+        if (accion == Controlador.MODIFICAR && vacacion.getVacacionReprogramacion() != null) {
+            this.tieneReprogramacion = true;
+            return Controlador.LEER;
+        }
+
+        return accion;
+    }
+
+    private class PeriodoWorker extends SwingWorker<Double, Void> {
+
+        @Override
+        protected Double doInBackground() throws Exception {
+            lblCargandoPeriodo.setVisible(true);
+            lblCargandoPeriodo.setBusy(true);
+            btnHistorial.setEnabled(false);
+            Thread.sleep(5000);
+            return 100.0;
+        }
+
+        @Override
+        protected void done() {
+            lblCargandoPeriodo.setBusy(false);
+            lblCargandoPeriodo.setVisible(false);
+            btnHistorial.setEnabled(true);
+        }
+
+    }
+
 }

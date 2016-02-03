@@ -10,6 +10,7 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
 import java.io.File;
+import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JTree;
@@ -27,36 +28,37 @@ public class RenderArea extends DefaultTreeCellRenderer implements TreeCellRende
 
     public RenderArea() {
         this.label = new JLabel();
-        this.label.setFont(new Font(Font.SANS_SERIF, 1, 15));        
+        this.label.setFont(new Font(Font.SANS_SERIF, 1, 15));
         this.label.setOpaque(true);
     }
 
     @Override
     public Component getTreeCellRendererComponent(JTree tree, Object value, boolean selected, boolean expanded, boolean leaf, int row, boolean hasFocus) {
         Object elemento = ((DefaultMutableTreeNode) value).getUserObject();
-        
+
         ImageIcon icono = null;
         String iconoRuta = "";
         String titulo = "";
         if (elemento != null) {
-            
+
             if (elemento instanceof Departamento) {
                 Departamento departamento = (Departamento) elemento;
-                iconoRuta = departamento.isSede() ? "iconos/icon_sede.png" : "iconos/icon_area.png";
+                iconoRuta = departamento.isSede() ? "/icon/icon_sede.png" : "/icon/icon_area.png";
                 titulo = departamento.getNombre();
-            } else{
+            } else {
                 titulo = elemento.toString();
-                iconoRuta = "iconos/icon_organigrama.png";
+                iconoRuta = "/icon/icon_organigrama.png";
             }
-                
-            File iconoFichero = new File(iconoRuta);
-            if(iconoFichero.exists()){
-                icono = new ImageIcon(iconoFichero.getAbsolutePath());
-            }
-            if(hasFocus){
-                this.label.setBackground(new Color(219, 237, 255));                
+
+//            File iconoFichero = new File(iconoRuta);
+            URL iconoURL = getClass().getResource(iconoRuta);
+//            if(iconoFichero.exists()){
+            icono = new ImageIcon(iconoURL);
+//            }
+            if (hasFocus) {
+                this.label.setBackground(new Color(219, 237, 255));
                 this.label.setForeground(Color.BLACK);
-            }else{
+            } else {
                 this.label.setBackground(Color.WHITE);
                 this.label.setForeground(Color.BLACK);
             }

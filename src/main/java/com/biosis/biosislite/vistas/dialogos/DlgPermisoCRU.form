@@ -21,6 +21,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="title" type="java.lang.String" value="Gesti&#xf3;n de permisos"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -276,6 +277,7 @@
                     <Property name="text" type="java.lang.String" value="Por fecha"/>
                   </Properties>
                   <Events>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="radFechaStateChanged"/>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radFechaActionPerformed"/>
                   </Events>
                 </Component>
@@ -287,6 +289,7 @@
                     <Property name="text" type="java.lang.String" value="Por hora"/>
                   </Properties>
                   <Events>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="radHoraStateChanged"/>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radHoraActionPerformed"/>
                   </Events>
                 </Component>

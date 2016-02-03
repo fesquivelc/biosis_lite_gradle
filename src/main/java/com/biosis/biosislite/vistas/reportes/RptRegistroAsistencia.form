@@ -436,6 +436,9 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="SansSerif" size="11" style="1"/>
                         </Property>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/icon/icon_jornada.png"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="Ver marcaciones en el d&#xed;a"/>
                       </Properties>
                       <Events>
@@ -446,6 +449,9 @@
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="SansSerif" size="11" style="1"/>
+                        </Property>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/icon/Edit_24x24.png"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Marcaci&#xf3;n manual"/>
                       </Properties>
@@ -458,6 +464,9 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="SansSerif" size="11" style="1"/>
                         </Property>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/icon/Print_24x24.png"/>
+                        </Property>
                         <Property name="text" type="java.lang.String" value="Imprimir"/>
                       </Properties>
                       <Events>
@@ -468,6 +477,9 @@
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="SansSerif" size="11" style="1"/>
+                        </Property>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/icon/Print_24x24.png"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Imprimir Resumen"/>
                       </Properties>

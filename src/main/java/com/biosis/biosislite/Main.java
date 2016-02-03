@@ -28,6 +28,8 @@ public class Main {
     public static String REPORTE_LOGO = "";
     
     public static File FICHERO_REPORTE_SALIDA;
+    public static File FICHERO_REPORTE_ASISTENCIA_DETALLADO;
+    public static File FICHERO_REPORTE_ASISTENCIA_RESUMEN;
 
     public static void main(String[] args) {
         // TODO code application logic here
@@ -62,6 +64,9 @@ public class Main {
         REPORTE_RUC = props.getProperty("reporte_ruc");
         
         FICHERO_REPORTE_SALIDA = new File(recursos.getProperty("reporte_permisos"));
+        FICHERO_REPORTE_ASISTENCIA_DETALLADO = new File(recursos.getProperty("reporte_asistencia_detallado"));
+        FICHERO_REPORTE_ASISTENCIA_RESUMEN = new File(recursos.getProperty("reporte_asistencia_resumen"));
+        
         DlgLogin principal = new DlgLogin(null, true);
         principal.setVisible(true);
 
