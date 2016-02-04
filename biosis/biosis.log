@@ -83,3 +83,692 @@
 2016-01-25 19:25:16.392	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
 2016-01-25 19:25:17.189	 INFO	[main]	CLASE: Dialect	 METODO: <init>	LINEA:145	MSJE:HHH000400: Using dialect: org.hibernate.dialect.SQLServer2005Dialect
 2016-01-25 19:25:17.527	 INFO	[main]	CLASE: ASTQueryTranslatorFactory	 METODO: <init>	LINEA:47	MSJE:HHH000397: Using ASTQueryTranslatorFactory
+2016-01-27 18:38:08.641	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:38:08.664	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:38:08.665	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:38:09.075	 INFO	[main]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:38:09.151	 INFO	[main]	CLASE: Version	 METODO: logVersion	LINEA:54	MSJE:HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-27 18:38:09.153	 INFO	[main]	CLASE: Environment	 METODO: <clinit>	LINEA:239	MSJE:HHH000206: hibernate.properties not found
+2016-01-27 18:38:09.154	 INFO	[main]	CLASE: Environment	 METODO: buildBytecodeProvider	LINEA:346	MSJE:HHH000021: Bytecode provider name : javassist
+2016-01-27 18:38:09.421	 INFO	[main]	CLASE: JavaReflectionManager	 METODO: <clinit>	LINEA:66	MSJE:HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-27 18:38:09.513	 WARN	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:38:09.707	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://127.0.0.1:53041;databaseName=sm_biosis;sendTimeAsDatetime=false]
+2016-01-27 18:38:09.709	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:38:09.711	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:38:09.713	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:38:24.796	ERROR	[main]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:38:54.001	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:38:54.002	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:38:54.005	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:38:54.036	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:38:54.079	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:38:54.081	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://127.0.0.1:53041;databaseName=sm_biosis;sendTimeAsDatetime=false]
+2016-01-27 18:38:54.081	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:38:54.081	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:38:54.082	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:39:08.632	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:42:16.952	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:42:16.952	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:42:16.952	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:42:17.052	 INFO	[main]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:42:17.114	 INFO	[main]	CLASE: Version	 METODO: logVersion	LINEA:54	MSJE:HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-27 18:42:17.114	 INFO	[main]	CLASE: Environment	 METODO: <clinit>	LINEA:239	MSJE:HHH000206: hibernate.properties not found
+2016-01-27 18:42:17.114	 INFO	[main]	CLASE: Environment	 METODO: buildBytecodeProvider	LINEA:346	MSJE:HHH000021: Bytecode provider name : javassist
+2016-01-27 18:42:17.271	 INFO	[main]	CLASE: JavaReflectionManager	 METODO: <clinit>	LINEA:66	MSJE:HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-27 18:42:17.302	 WARN	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:42:17.333	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=bd_biostar_minedu;sendTimeAsDateTime=false]
+2016-01-27 18:42:17.333	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:42:17.333	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:42:17.349	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:42:17.833	ERROR	[main]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:42:28.945	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:42:28.945	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:42:28.945	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:42:28.992	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:42:29.023	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:42:29.023	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=bd_biostar_minedu;sendTimeAsDateTime=false]
+2016-01-27 18:42:29.023	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:42:29.023	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:42:29.023	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:42:29.057	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:42:36.082	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:42:36.082	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:42:36.082	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:42:36.119	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:42:36.161	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:42:36.161	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=bd_biostar_minedu;sendTimeAsDateTime=false]
+2016-01-27 18:42:36.161	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:42:36.161	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:42:36.161	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:42:36.223	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:42:41.404	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:42:41.404	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:42:41.404	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:42:41.450	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:42:41.482	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:42:41.482	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=bd_biostar_minedu;sendTimeAsDateTime=false]
+2016-01-27 18:42:41.482	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:42:41.482	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:42:41.482	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:42:41.529	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:42:44.404	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:42:44.404	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:42:44.404	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:42:44.419	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:42:44.450	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:42:44.450	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=bd_biostar_minedu;sendTimeAsDateTime=false]
+2016-01-27 18:42:44.450	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:42:44.450	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:42:44.450	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:42:44.482	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:46:16.317	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:46:16.332	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:46:16.348	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:46:16.931	 INFO	[main]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:46:17.523	 INFO	[main]	CLASE: Version	 METODO: logVersion	LINEA:54	MSJE:HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-27 18:46:17.540	 INFO	[main]	CLASE: Environment	 METODO: <clinit>	LINEA:239	MSJE:HHH000206: hibernate.properties not found
+2016-01-27 18:46:17.571	 INFO	[main]	CLASE: Environment	 METODO: buildBytecodeProvider	LINEA:346	MSJE:HHH000021: Bytecode provider name : javassist
+2016-01-27 18:46:18.948	 INFO	[main]	CLASE: JavaReflectionManager	 METODO: <clinit>	LINEA:66	MSJE:HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-27 18:46:19.245	 WARN	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:46:19.370	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=bd_biostar_minedu;sendTimeAsDateTime=false]
+2016-01-27 18:46:19.370	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:46:19.370	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:46:19.386	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:46:19.839	ERROR	[main]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:46:45.729	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:46:45.729	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:46:45.729	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:46:45.823	 INFO	[main]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:46:45.870	 INFO	[main]	CLASE: Version	 METODO: logVersion	LINEA:54	MSJE:HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-27 18:46:45.870	 INFO	[main]	CLASE: Environment	 METODO: <clinit>	LINEA:239	MSJE:HHH000206: hibernate.properties not found
+2016-01-27 18:46:45.885	 INFO	[main]	CLASE: Environment	 METODO: buildBytecodeProvider	LINEA:346	MSJE:HHH000021: Bytecode provider name : javassist
+2016-01-27 18:46:46.026	 INFO	[main]	CLASE: JavaReflectionManager	 METODO: <clinit>	LINEA:66	MSJE:HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-27 18:46:46.073	 WARN	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:46:46.104	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:46:46.104	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:46:46.120	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:46:46.120	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:46:46.292	ERROR	[main]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:46:59.550	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:46:59.550	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:46:59.550	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:46:59.566	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:46:59.597	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:46:59.597	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:46:59.597	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:46:59.597	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:46:59.597	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:46:59.628	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:47:56.498	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:47:56.498	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:47:56.514	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:47:56.597	 INFO	[main]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:47:56.659	 INFO	[main]	CLASE: Version	 METODO: logVersion	LINEA:54	MSJE:HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-27 18:47:56.659	 INFO	[main]	CLASE: Environment	 METODO: <clinit>	LINEA:239	MSJE:HHH000206: hibernate.properties not found
+2016-01-27 18:47:56.659	 INFO	[main]	CLASE: Environment	 METODO: buildBytecodeProvider	LINEA:346	MSJE:HHH000021: Bytecode provider name : javassist
+2016-01-27 18:47:56.847	 INFO	[main]	CLASE: JavaReflectionManager	 METODO: <clinit>	LINEA:66	MSJE:HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-27 18:47:56.878	 WARN	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:47:56.925	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:47:56.925	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:47:56.925	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:47:56.925	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:47:57.097	ERROR	[main]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:49:19.288	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:49:19.288	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:49:19.288	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:49:19.335	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:49:19.382	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:49:19.382	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:49:19.382	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:49:19.382	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:49:19.382	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:49:19.413	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:49:24.369	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:49:24.369	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:49:24.369	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:49:24.400	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:49:24.462	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:49:24.462	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:49:24.462	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:49:24.462	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:49:24.462	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:49:24.494	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:56:26.527	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:56:26.527	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:56:26.527	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:56:26.621	 INFO	[main]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:56:26.683	 INFO	[main]	CLASE: Version	 METODO: logVersion	LINEA:54	MSJE:HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-27 18:56:26.683	 INFO	[main]	CLASE: Environment	 METODO: <clinit>	LINEA:239	MSJE:HHH000206: hibernate.properties not found
+2016-01-27 18:56:26.699	 INFO	[main]	CLASE: Environment	 METODO: buildBytecodeProvider	LINEA:346	MSJE:HHH000021: Bytecode provider name : javassist
+2016-01-27 18:56:26.845	 INFO	[main]	CLASE: JavaReflectionManager	 METODO: <clinit>	LINEA:66	MSJE:HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-27 18:56:26.897	 WARN	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:56:26.944	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:56:26.944	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:56:26.960	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:56:26.960	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:56:27.132	ERROR	[main]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:56:47.003	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:56:47.019	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:56:47.019	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:56:47.066	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:56:47.113	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:56:47.113	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:56:47.113	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:56:47.113	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:56:47.113	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:56:47.144	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:03.328	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:03.328	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:03.328	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:03.359	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:03.390	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:03.390	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:03.390	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:03.390	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:03.406	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:03.422	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:07.037	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:07.037	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:07.037	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:07.068	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:07.115	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:07.115	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:07.115	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:07.115	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:07.115	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:07.146	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:11.022	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:11.022	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:11.022	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:11.069	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:11.105	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:11.106	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:11.106	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:11.106	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:11.106	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:11.122	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:11.924	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:11.924	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:11.924	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:11.940	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:11.971	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:11.971	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:11.971	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:11.971	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:11.971	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:12.002	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:12.252	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:12.252	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:12.252	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:12.290	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:12.330	 INFO	[Finalizer]	CLASE: DriverManagerConnectionProviderImpl	 METODO: stop	LINEA:281	MSJE:HHH000030: Cleaning up connection pool [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:12.330	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:12.330	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:12.330	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:12.330	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:12.330	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:12.330	 INFO	[Finalizer]	CLASE: DriverManagerConnectionProviderImpl	 METODO: stop	LINEA:281	MSJE:HHH000030: Cleaning up connection pool [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:12.330	 INFO	[Finalizer]	CLASE: DriverManagerConnectionProviderImpl	 METODO: stop	LINEA:281	MSJE:HHH000030: Cleaning up connection pool [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:12.330	 INFO	[Finalizer]	CLASE: DriverManagerConnectionProviderImpl	 METODO: stop	LINEA:281	MSJE:HHH000030: Cleaning up connection pool [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:12.330	 INFO	[Finalizer]	CLASE: DriverManagerConnectionProviderImpl	 METODO: stop	LINEA:281	MSJE:HHH000030: Cleaning up connection pool [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:12.362	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:12.455	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:12.455	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:12.455	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:12.471	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:12.502	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:12.502	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:12.502	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:12.502	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:12.502	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:12.533	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:12.627	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:12.627	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:12.643	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:12.658	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:12.705	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:12.705	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:12.705	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:12.705	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:12.705	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:12.737	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:12.971	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:12.971	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:12.987	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:13.002	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:13.049	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:13.049	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:13.049	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:13.049	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:13.049	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:13.080	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:14.414	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:14.414	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:14.414	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:14.445	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:14.476	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:14.476	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:14.476	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:14.476	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:14.476	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:14.507	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:15.272	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:15.272	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:15.272	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:15.272	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:15.303	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:15.303	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:15.303	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:15.303	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:15.303	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:15.334	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:15.428	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:15.428	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:15.428	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:15.428	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:15.459	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:15.459	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:15.459	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:15.459	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:15.459	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:15.490	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:15.584	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:15.584	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:15.584	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:15.584	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:15.615	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:15.615	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:15.615	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:15.615	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:15.615	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:15.647	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:15.725	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:15.725	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:15.725	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:15.740	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:15.787	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:15.787	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:15.787	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:15.787	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:15.787	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:15.835	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:16.006	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:16.006	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:16.006	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:16.038	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:16.069	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:16.085	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:16.085	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:16.085	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:16.085	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:16.100	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:16.147	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:16.147	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:16.147	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:16.163	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:16.194	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:16.194	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:16.194	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:16.194	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:16.194	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:16.225	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:16.587	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:16.587	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:16.587	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:16.602	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:16.665	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:16.665	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:16.665	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:16.665	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:16.665	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:16.680	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:16.727	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:16.727	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:16.727	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:16.743	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:16.743	 INFO	[Finalizer]	CLASE: DriverManagerConnectionProviderImpl	 METODO: stop	LINEA:281	MSJE:HHH000030: Cleaning up connection pool [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:16.743	 INFO	[Finalizer]	CLASE: DriverManagerConnectionProviderImpl	 METODO: stop	LINEA:281	MSJE:HHH000030: Cleaning up connection pool [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:16.743	 INFO	[Finalizer]	CLASE: DriverManagerConnectionProviderImpl	 METODO: stop	LINEA:281	MSJE:HHH000030: Cleaning up connection pool [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:16.743	 INFO	[Finalizer]	CLASE: DriverManagerConnectionProviderImpl	 METODO: stop	LINEA:281	MSJE:HHH000030: Cleaning up connection pool [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:16.743	 INFO	[Finalizer]	CLASE: DriverManagerConnectionProviderImpl	 METODO: stop	LINEA:281	MSJE:HHH000030: Cleaning up connection pool [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:16.743	 INFO	[Finalizer]	CLASE: DriverManagerConnectionProviderImpl	 METODO: stop	LINEA:281	MSJE:HHH000030: Cleaning up connection pool [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:16.743	 INFO	[Finalizer]	CLASE: DriverManagerConnectionProviderImpl	 METODO: stop	LINEA:281	MSJE:HHH000030: Cleaning up connection pool [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:16.743	 INFO	[Finalizer]	CLASE: DriverManagerConnectionProviderImpl	 METODO: stop	LINEA:281	MSJE:HHH000030: Cleaning up connection pool [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:16.743	 INFO	[Finalizer]	CLASE: DriverManagerConnectionProviderImpl	 METODO: stop	LINEA:281	MSJE:HHH000030: Cleaning up connection pool [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:16.743	 INFO	[Finalizer]	CLASE: DriverManagerConnectionProviderImpl	 METODO: stop	LINEA:281	MSJE:HHH000030: Cleaning up connection pool [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:16.743	 INFO	[Finalizer]	CLASE: DriverManagerConnectionProviderImpl	 METODO: stop	LINEA:281	MSJE:HHH000030: Cleaning up connection pool [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:16.743	 INFO	[Finalizer]	CLASE: DriverManagerConnectionProviderImpl	 METODO: stop	LINEA:281	MSJE:HHH000030: Cleaning up connection pool [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:16.779	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:16.779	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:16.779	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:16.779	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:16.779	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:16.795	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:19.226	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:19.226	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:19.226	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:19.226	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:19.258	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:19.258	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:19.258	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:19.258	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:19.258	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:19.289	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:19.805	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:19.805	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:19.805	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:19.820	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:19.883	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:19.883	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:19.883	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:19.883	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:19.883	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:19.898	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:20.148	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:20.148	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:20.148	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:20.180	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:20.211	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:20.211	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:20.211	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:20.211	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:20.211	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:20.242	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:20.431	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:20.431	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:20.431	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:20.447	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:20.494	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:20.494	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:20.494	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:20.494	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:20.494	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:20.509	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:20.650	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:20.650	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:20.650	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:20.665	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:20.697	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:20.697	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:20.697	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:20.697	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:20.697	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:20.728	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:20.900	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:20.900	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:20.900	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:20.915	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:20.962	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:20.962	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:20.962	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:20.962	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:20.962	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:20.994	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:29.908	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:29.908	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:29.924	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:30.002	 INFO	[main]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:30.064	 INFO	[main]	CLASE: Version	 METODO: logVersion	LINEA:54	MSJE:HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-27 18:57:30.080	 INFO	[main]	CLASE: Environment	 METODO: <clinit>	LINEA:239	MSJE:HHH000206: hibernate.properties not found
+2016-01-27 18:57:30.080	 INFO	[main]	CLASE: Environment	 METODO: buildBytecodeProvider	LINEA:346	MSJE:HHH000021: Bytecode provider name : javassist
+2016-01-27 18:57:30.236	 INFO	[main]	CLASE: JavaReflectionManager	 METODO: <clinit>	LINEA:66	MSJE:HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-27 18:57:30.268	 WARN	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:30.299	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:30.299	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:30.314	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:30.314	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:30.471	ERROR	[main]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 18:57:49.820	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:49.820	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:49.820	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 18:57:49.852	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 18:57:49.883	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 18:57:49.883	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 18:57:49.883	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 18:57:49.883	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 18:57:49.883	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 18:57:49.914	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 19:03:15.285	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:03:15.285	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:03:15.285	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:03:15.379	 INFO	[main]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 19:03:15.441	 INFO	[main]	CLASE: Version	 METODO: logVersion	LINEA:54	MSJE:HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-27 19:03:15.457	 INFO	[main]	CLASE: Environment	 METODO: <clinit>	LINEA:239	MSJE:HHH000206: hibernate.properties not found
+2016-01-27 19:03:15.457	 INFO	[main]	CLASE: Environment	 METODO: buildBytecodeProvider	LINEA:346	MSJE:HHH000021: Bytecode provider name : javassist
+2016-01-27 19:03:15.613	 INFO	[main]	CLASE: JavaReflectionManager	 METODO: <clinit>	LINEA:66	MSJE:HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-27 19:03:15.651	 WARN	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 19:03:15.713	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 19:03:15.713	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 19:03:15.713	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 19:03:15.713	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 19:03:15.885	ERROR	[main]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 19:03:24.978	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:03:24.978	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:03:24.978	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:03:25.025	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 19:03:25.071	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 19:03:25.071	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 19:03:25.071	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 19:03:25.071	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 19:03:25.071	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 19:03:25.103	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 19:03:26.321	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:03:26.321	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:03:26.321	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:03:26.353	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 19:03:26.415	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 19:03:26.431	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 19:03:26.431	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 19:03:26.431	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 19:03:26.431	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 19:03:26.462	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 19:03:33.849	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:03:33.849	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:03:33.849	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:03:33.881	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 19:03:33.928	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 19:03:33.928	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 19:03:33.928	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 19:03:33.928	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 19:03:33.928	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 19:03:33.943	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 19:12:02.452	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:12:02.456	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:12:02.458	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:12:02.554	 INFO	[main]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 19:12:02.630	 INFO	[main]	CLASE: Version	 METODO: logVersion	LINEA:54	MSJE:HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-27 19:12:02.632	 INFO	[main]	CLASE: Environment	 METODO: <clinit>	LINEA:239	MSJE:HHH000206: hibernate.properties not found
+2016-01-27 19:12:02.633	 INFO	[main]	CLASE: Environment	 METODO: buildBytecodeProvider	LINEA:346	MSJE:HHH000021: Bytecode provider name : javassist
+2016-01-27 19:12:02.817	 INFO	[main]	CLASE: JavaReflectionManager	 METODO: <clinit>	LINEA:66	MSJE:HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-27 19:12:02.874	 WARN	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 19:12:02.909	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 19:12:02.910	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 19:12:02.912	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 19:12:02.914	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 19:12:03.073	ERROR	[main]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 19:12:13.786	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:12:13.788	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:12:13.792	 WARN	[AWT-EventQueue-0]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:12:13.826	 INFO	[AWT-EventQueue-0]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 19:12:13.863	 WARN	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 19:12:13.864	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 19:12:13.864	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 19:12:13.864	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 19:12:13.864	 INFO	[AWT-EventQueue-0]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 19:12:13.889	ERROR	[AWT-EventQueue-0]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 19:15:33.185	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:15:33.189	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:15:33.189	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:15:33.293	 INFO	[main]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 19:15:33.356	 INFO	[main]	CLASE: Version	 METODO: logVersion	LINEA:54	MSJE:HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-27 19:15:33.356	 INFO	[main]	CLASE: Environment	 METODO: <clinit>	LINEA:239	MSJE:HHH000206: hibernate.properties not found
+2016-01-27 19:15:33.356	 INFO	[main]	CLASE: Environment	 METODO: buildBytecodeProvider	LINEA:346	MSJE:HHH000021: Bytecode provider name : javassist
+2016-01-27 19:15:33.512	 INFO	[main]	CLASE: JavaReflectionManager	 METODO: <clinit>	LINEA:66	MSJE:HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-27 19:15:33.575	 WARN	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 19:15:33.637	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 19:15:33.637	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 19:15:33.637	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 19:15:33.653	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 19:15:33.825	ERROR	[main]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 19:19:13.654	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:19:13.654	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:19:13.654	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:19:13.764	 INFO	[main]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 19:19:13.826	 INFO	[main]	CLASE: Version	 METODO: logVersion	LINEA:54	MSJE:HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-27 19:19:13.826	 INFO	[main]	CLASE: Environment	 METODO: <clinit>	LINEA:239	MSJE:HHH000206: hibernate.properties not found
+2016-01-27 19:19:13.826	 INFO	[main]	CLASE: Environment	 METODO: buildBytecodeProvider	LINEA:346	MSJE:HHH000021: Bytecode provider name : javassist
+2016-01-27 19:19:13.986	 INFO	[main]	CLASE: JavaReflectionManager	 METODO: <clinit>	LINEA:66	MSJE:HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-27 19:19:14.049	 WARN	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 19:19:14.095	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 19:19:14.095	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 19:19:14.095	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 19:19:14.095	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 19:19:14.288	ERROR	[main]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-01-27 19:23:30.428	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:23:30.443	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:23:30.443	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:23:30.537	 INFO	[main]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 19:23:30.584	 INFO	[main]	CLASE: Version	 METODO: logVersion	LINEA:54	MSJE:HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-27 19:23:30.584	 INFO	[main]	CLASE: Environment	 METODO: <clinit>	LINEA:239	MSJE:HHH000206: hibernate.properties not found
+2016-01-27 19:23:30.599	 INFO	[main]	CLASE: Environment	 METODO: buildBytecodeProvider	LINEA:346	MSJE:HHH000021: Bytecode provider name : javassist
+2016-01-27 19:23:30.740	 INFO	[main]	CLASE: JavaReflectionManager	 METODO: <clinit>	LINEA:66	MSJE:HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-27 19:23:30.787	 WARN	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 19:23:30.834	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=bd_biostar_minedu;sendTimeAsDateTime=false]
+2016-01-27 19:23:30.834	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 19:23:30.834	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 19:23:30.849	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 19:23:31.162	 INFO	[main]	CLASE: Dialect	 METODO: <init>	LINEA:145	MSJE:HHH000400: Using dialect: org.hibernate.dialect.SQLServer2008Dialect
+2016-01-27 19:23:31.646	 INFO	[main]	CLASE: ASTQueryTranslatorFactory	 METODO: <init>	LINEA:47	MSJE:HHH000397: Using ASTQueryTranslatorFactory
+2016-01-27 19:23:38.757	 WARN	[AWT-EventQueue-0]	CLASE: SqlExceptionHelper	 METODO: logExceptions	LINEA:144	MSJE:SQL Error: 208, SQLState: S0002
+2016-01-27 19:23:38.772	ERROR	[AWT-EventQueue-0]	CLASE: SqlExceptionHelper	 METODO: logExceptions	LINEA:146	MSJE:Invalid object name 'Usuario'.
+2016-01-27 19:23:38.772	 INFO	[AWT-EventQueue-0]	CLASE: DefaultLoadEventListener	 METODO: onLoad	LINEA:159	MSJE:HHH000327: Error performing load command : org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2016-01-27 19:23:46.297	 WARN	[AWT-EventQueue-0]	CLASE: SqlExceptionHelper	 METODO: logExceptions	LINEA:144	MSJE:SQL Error: 208, SQLState: S0002
+2016-01-27 19:23:46.297	ERROR	[AWT-EventQueue-0]	CLASE: SqlExceptionHelper	 METODO: logExceptions	LINEA:146	MSJE:Invalid object name 'Usuario'.
+2016-01-27 19:23:46.297	 INFO	[AWT-EventQueue-0]	CLASE: DefaultLoadEventListener	 METODO: onLoad	LINEA:159	MSJE:HHH000327: Error performing load command : org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2016-01-27 19:23:47.235	 WARN	[AWT-EventQueue-0]	CLASE: SqlExceptionHelper	 METODO: logExceptions	LINEA:144	MSJE:SQL Error: 208, SQLState: S0002
+2016-01-27 19:23:47.235	ERROR	[AWT-EventQueue-0]	CLASE: SqlExceptionHelper	 METODO: logExceptions	LINEA:146	MSJE:Invalid object name 'Usuario'.
+2016-01-27 19:23:47.235	 INFO	[AWT-EventQueue-0]	CLASE: DefaultLoadEventListener	 METODO: onLoad	LINEA:159	MSJE:HHH000327: Error performing load command : org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2016-01-27 19:23:47.500	 WARN	[AWT-EventQueue-0]	CLASE: SqlExceptionHelper	 METODO: logExceptions	LINEA:144	MSJE:SQL Error: 208, SQLState: S0002
+2016-01-27 19:23:47.516	ERROR	[AWT-EventQueue-0]	CLASE: SqlExceptionHelper	 METODO: logExceptions	LINEA:146	MSJE:Invalid object name 'Usuario'.
+2016-01-27 19:23:47.516	 INFO	[AWT-EventQueue-0]	CLASE: DefaultLoadEventListener	 METODO: onLoad	LINEA:159	MSJE:HHH000327: Error performing load command : org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2016-01-27 19:23:47.688	 WARN	[AWT-EventQueue-0]	CLASE: SqlExceptionHelper	 METODO: logExceptions	LINEA:144	MSJE:SQL Error: 208, SQLState: S0002
+2016-01-27 19:23:47.688	ERROR	[AWT-EventQueue-0]	CLASE: SqlExceptionHelper	 METODO: logExceptions	LINEA:146	MSJE:Invalid object name 'Usuario'.
+2016-01-27 19:23:47.688	 INFO	[AWT-EventQueue-0]	CLASE: DefaultLoadEventListener	 METODO: onLoad	LINEA:159	MSJE:HHH000327: Error performing load command : org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2016-01-27 19:23:48.516	 WARN	[AWT-EventQueue-0]	CLASE: SqlExceptionHelper	 METODO: logExceptions	LINEA:144	MSJE:SQL Error: 208, SQLState: S0002
+2016-01-27 19:23:48.516	ERROR	[AWT-EventQueue-0]	CLASE: SqlExceptionHelper	 METODO: logExceptions	LINEA:146	MSJE:Invalid object name 'Usuario'.
+2016-01-27 19:23:48.516	 INFO	[AWT-EventQueue-0]	CLASE: DefaultLoadEventListener	 METODO: onLoad	LINEA:159	MSJE:HHH000327: Error performing load command : org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+2016-01-27 19:24:25.624	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:24:25.624	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:24:25.624	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-01-27 19:24:25.717	 INFO	[main]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-01-27 19:24:25.764	 INFO	[main]	CLASE: Version	 METODO: logVersion	LINEA:54	MSJE:HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-27 19:24:25.780	 INFO	[main]	CLASE: Environment	 METODO: <clinit>	LINEA:239	MSJE:HHH000206: hibernate.properties not found
+2016-01-27 19:24:25.780	 INFO	[main]	CLASE: Environment	 METODO: buildBytecodeProvider	LINEA:346	MSJE:HHH000021: Bytecode provider name : javassist
+2016-01-27 19:24:25.921	 INFO	[main]	CLASE: JavaReflectionManager	 METODO: <clinit>	LINEA:66	MSJE:HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-27 19:24:25.967	 WARN	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-01-27 19:24:26.014	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP;sendTimeAsDateTime=false]
+2016-01-27 19:24:26.014	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=sa, password=****}
+2016-01-27 19:24:26.014	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-01-27 19:24:26.014	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-01-27 19:24:26.264	 INFO	[main]	CLASE: Dialect	 METODO: <init>	LINEA:145	MSJE:HHH000400: Using dialect: org.hibernate.dialect.SQLServer2008Dialect
+2016-01-27 19:24:26.467	 INFO	[main]	CLASE: ASTQueryTranslatorFactory	 METODO: <init>	LINEA:47	MSJE:HHH000397: Using ASTQueryTranslatorFactory

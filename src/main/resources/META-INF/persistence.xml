@@ -46,8 +46,8 @@
     <class>com.biosis.biosislite.entidades.escalafon.AreaEmpleado</class>
     <class>com.biosis.biosislite.entidades.escalafon.Contrato</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://192.168.0.101\JUPITER;databaseName=ensa_biosis_final;sendTimeAsDateTime=false"/>
-      <property name="javax.persistence.jdbc.password" value="Elhacker12"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://192.168.1.250\SQL2008R2;databaseName=BD_GRP"/>
+      <property name="javax.persistence.jdbc.password" value="Biosi5"/>
       <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
       <property name="javax.persistence.jdbc.user" value="sa"/>
       <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>

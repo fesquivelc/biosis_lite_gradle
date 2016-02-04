@@ -1,0 +1,1549 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.8" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
+  <Properties>
+    <Property name="title" type="java.lang.String" value="Gesti&#xf3;n de Horarios"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jTabbedPane1" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jTabbedPane1" pref="525" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="pnlHvsE">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Horarios vs Empleados">
+                <Property name="tabTitle" type="java.lang.String" value="Horarios vs Empleados"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+            <Property name="columns" type="int" value="2"/>
+            <Property name="rows" type="int" value="1"/>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="pnlHorariosHvsE">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Horarios"/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="pnlParamBusquedaHvsE">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Par&#xe1;metros de b&#xfa;squeda"/>
+                      </Border>
+                    </Property>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="North"/>
+                    </Constraint>
+                  </Constraints>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jLabel1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Nombre / C&#xf3;digo / Documento:"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+                          <GridBagConstraints gridX="0" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtBusquedaHHvsE">
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+                          <GridBagConstraints gridX="4" gridY="0" gridWidth="1" gridHeight="1" fill="2" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.1" weightY="0.0"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="btnBuscarH">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Buscar"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+                          <GridBagConstraints gridX="8" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                  </SubComponents>
+                  <LayoutCode>
+                    <CodeStatement>
+                      <CodeExpression id="1_pnlParamBusquedaHLayout">
+                        <CodeVariable name="pnlParamBusquedaHLayout" type="4096" declaredType="java.awt.GridBagLayout"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="CodeConstructor">
+                            <CodeConstructor class="java.awt.GridBagLayout" parameterTypes=""/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeExpression">
+                        <CodeExpression id="1_pnlParamBusquedaHLayout"/>
+                      </StatementProvider>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="1_pnlParamBusquedaHLayout"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="columnWidths" class="java.awt.GridBagLayout"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="2">
+                          <ExpressionOrigin>
+                            <Value type="[I" editor="org.netbeans.modules.form.layoutsupport.delegates.GridBagLayoutSupport$IntArrayPropertyEditor">
+                              <PropertyValue value="[0, 5, 0, 5, 0, 5, 0, 5, 0]"/>
+                            </Value>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="1_pnlParamBusquedaHLayout"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="rowHeights" class="java.awt.GridBagLayout"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="3">
+                          <ExpressionOrigin>
+                            <Value type="[I" editor="org.netbeans.modules.form.layoutsupport.delegates.GridBagLayoutSupport$IntArrayPropertyEditor">
+                              <PropertyValue value="[0]"/>
+                            </Value>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="4_pnlParamBusquedaHvsE">
+                        <CodeVariable name="pnlParamBusquedaHvsE" type="8194" declaredType="javax.swing.JPanel"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="ComponentRef">
+                            <ComponentRef name="pnlParamBusquedaHvsE"/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeMethod">
+                        <CodeMethod name="setLayout" class="java.awt.Container" parameterTypes="java.awt.LayoutManager"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="1_pnlParamBusquedaHLayout"/>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="5_gridBagConstraints">
+                        <CodeVariable name="gridBagConstraints" type="20480" declaredType="java.awt.GridBagConstraints"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="CodeConstructor">
+                            <CodeConstructor class="java.awt.GridBagConstraints" parameterTypes=""/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeExpression">
+                        <CodeExpression id="5_gridBagConstraints"/>
+                      </StatementProvider>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="5_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="6">
+                          <ExpressionOrigin>
+                            <Value type="int" value="0"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="5_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="7">
+                          <ExpressionOrigin>
+                            <Value type="int" value="0"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="4_pnlParamBusquedaHvsE"/>
+                      <StatementProvider type="CodeMethod">
+                        <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="8_jLabel1">
+                          <CodeVariable name="jLabel1" type="8194" declaredType="javax.swing.JLabel"/>
+                          <ExpressionOrigin>
+                            <ExpressionProvider type="ComponentRef">
+                              <ComponentRef name="jLabel1"/>
+                            </ExpressionProvider>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                        <CodeExpression id="5_gridBagConstraints"/>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="9_gridBagConstraints">
+                        <CodeVariable name="gridBagConstraints"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="CodeConstructor">
+                            <CodeConstructor class="java.awt.GridBagConstraints" parameterTypes=""/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeExpression">
+                        <CodeExpression id="9_gridBagConstraints"/>
+                      </StatementProvider>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="9_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="10">
+                          <ExpressionOrigin>
+                            <Value type="int" value="4"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="9_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="11">
+                          <ExpressionOrigin>
+                            <Value type="int" value="0"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="9_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="fill" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="12">
+                          <ExpressionOrigin>
+                            <Value type="int" value="2"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="9_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="weightx" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="13">
+                          <ExpressionOrigin>
+                            <Value type="double" value="0.1"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="4_pnlParamBusquedaHvsE"/>
+                      <StatementProvider type="CodeMethod">
+                        <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="14_txtBusquedaHHvsE">
+                          <CodeVariable name="txtBusquedaHHvsE" type="8194" declaredType="javax.swing.JTextField"/>
+                          <ExpressionOrigin>
+                            <ExpressionProvider type="ComponentRef">
+                              <ComponentRef name="txtBusquedaHHvsE"/>
+                            </ExpressionProvider>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                        <CodeExpression id="9_gridBagConstraints"/>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="15_gridBagConstraints">
+                        <CodeVariable name="gridBagConstraints"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="CodeConstructor">
+                            <CodeConstructor class="java.awt.GridBagConstraints" parameterTypes=""/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeExpression">
+                        <CodeExpression id="15_gridBagConstraints"/>
+                      </StatementProvider>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="15_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="16">
+                          <ExpressionOrigin>
+                            <Value type="int" value="8"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="15_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="17">
+                          <ExpressionOrigin>
+                            <Value type="int" value="0"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="4_pnlParamBusquedaHvsE"/>
+                      <StatementProvider type="CodeMethod">
+                        <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="18_btnBuscarH">
+                          <CodeVariable name="btnBuscarH" type="8194" declaredType="javax.swing.JButton"/>
+                          <ExpressionOrigin>
+                            <ExpressionProvider type="ComponentRef">
+                              <ComponentRef name="btnBuscarH"/>
+                            </ExpressionProvider>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                        <CodeExpression id="15_gridBagConstraints"/>
+                      </Parameters>
+                    </CodeStatement>
+                  </LayoutCode>
+                </Container>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="Center"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="org.jdesktop.swingx.JXTable" name="tblHorariosHvsE">
+                      <Properties>
+                        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                          <Table columnCount="0" rowCount="4"/>
+                        </Property>
+                        <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                          <TableColumnModel selectionModel="0"/>
+                        </Property>
+                        <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                          <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="pnlButtonsHHvsE">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="South"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout">
+                    <Property name="verticalGap" type="int" value="0"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JButton" name="btnNuevoH">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Agregar Horario"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="btnModificarH">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Modificar"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="btnEliminarH">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Eliminar"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="pnlEmpleadosHvsE">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Empleados"/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="pnlFiltroEmpleadoHvsE">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Filtrar por:"/>
+                      </Border>
+                    </Property>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="First"/>
+                    </Constraint>
+                  </Constraints>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jLabel2">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Nombres / Dni / C&#xf3;digo Modular:"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+                          <GridBagConstraints gridX="0" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="17" weightX="0.0" weightY="0.0"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtBusquedaEHvsE">
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+                          <GridBagConstraints gridX="2" gridY="0" gridWidth="1" gridHeight="1" fill="2" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.1" weightY="0.0"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="btnBuscarE">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Buscar"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+                          <GridBagConstraints gridX="4" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="18" weightX="0.0" weightY="0.0"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                  </SubComponents>
+                  <LayoutCode>
+                    <CodeStatement>
+                      <CodeExpression id="19_pnlFiltroEmpleadoLayout">
+                        <CodeVariable name="pnlFiltroEmpleadoLayout" type="4096" declaredType="java.awt.GridBagLayout"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="CodeConstructor">
+                            <CodeConstructor class="java.awt.GridBagLayout" parameterTypes=""/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeExpression">
+                        <CodeExpression id="19_pnlFiltroEmpleadoLayout"/>
+                      </StatementProvider>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="19_pnlFiltroEmpleadoLayout"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="columnWidths" class="java.awt.GridBagLayout"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="20">
+                          <ExpressionOrigin>
+                            <Value type="[I" editor="org.netbeans.modules.form.layoutsupport.delegates.GridBagLayoutSupport$IntArrayPropertyEditor">
+                              <PropertyValue value="[0, 5, 0, 5, 0]"/>
+                            </Value>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="19_pnlFiltroEmpleadoLayout"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="rowHeights" class="java.awt.GridBagLayout"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="21">
+                          <ExpressionOrigin>
+                            <Value type="[I" editor="org.netbeans.modules.form.layoutsupport.delegates.GridBagLayoutSupport$IntArrayPropertyEditor">
+                              <PropertyValue value="[0]"/>
+                            </Value>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="22_pnlFiltroEmpleadoHvsE">
+                        <CodeVariable name="pnlFiltroEmpleadoHvsE" type="8194" declaredType="javax.swing.JPanel"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="ComponentRef">
+                            <ComponentRef name="pnlFiltroEmpleadoHvsE"/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeMethod">
+                        <CodeMethod name="setLayout" class="java.awt.Container" parameterTypes="java.awt.LayoutManager"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="19_pnlFiltroEmpleadoLayout"/>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="23_gridBagConstraints">
+                        <CodeVariable name="gridBagConstraints"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="CodeConstructor">
+                            <CodeConstructor class="java.awt.GridBagConstraints" parameterTypes=""/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeExpression">
+                        <CodeExpression id="23_gridBagConstraints"/>
+                      </StatementProvider>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="23_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="24">
+                          <ExpressionOrigin>
+                            <Value type="int" value="0"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="23_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="25">
+                          <ExpressionOrigin>
+                            <Value type="int" value="0"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="23_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="anchor" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="26">
+                          <ExpressionOrigin>
+                            <Value type="int" value="17"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="22_pnlFiltroEmpleadoHvsE"/>
+                      <StatementProvider type="CodeMethod">
+                        <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="27_jLabel2">
+                          <CodeVariable name="jLabel2" type="8194" declaredType="javax.swing.JLabel"/>
+                          <ExpressionOrigin>
+                            <ExpressionProvider type="ComponentRef">
+                              <ComponentRef name="jLabel2"/>
+                            </ExpressionProvider>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                        <CodeExpression id="23_gridBagConstraints"/>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="28_gridBagConstraints">
+                        <CodeVariable name="gridBagConstraints"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="CodeConstructor">
+                            <CodeConstructor class="java.awt.GridBagConstraints" parameterTypes=""/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeExpression">
+                        <CodeExpression id="28_gridBagConstraints"/>
+                      </StatementProvider>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="28_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="29">
+                          <ExpressionOrigin>
+                            <Value type="int" value="2"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="28_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="30">
+                          <ExpressionOrigin>
+                            <Value type="int" value="0"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="28_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="fill" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="31">
+                          <ExpressionOrigin>
+                            <Value type="int" value="2"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="28_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="weightx" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="32">
+                          <ExpressionOrigin>
+                            <Value type="double" value="0.1"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="22_pnlFiltroEmpleadoHvsE"/>
+                      <StatementProvider type="CodeMethod">
+                        <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="33_txtBusquedaEHvsE">
+                          <CodeVariable name="txtBusquedaEHvsE" type="8194" declaredType="javax.swing.JTextField"/>
+                          <ExpressionOrigin>
+                            <ExpressionProvider type="ComponentRef">
+                              <ComponentRef name="txtBusquedaEHvsE"/>
+                            </ExpressionProvider>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                        <CodeExpression id="28_gridBagConstraints"/>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="34_gridBagConstraints">
+                        <CodeVariable name="gridBagConstraints"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="CodeConstructor">
+                            <CodeConstructor class="java.awt.GridBagConstraints" parameterTypes=""/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeExpression">
+                        <CodeExpression id="34_gridBagConstraints"/>
+                      </StatementProvider>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="34_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="35">
+                          <ExpressionOrigin>
+                            <Value type="int" value="4"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="34_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="36">
+                          <ExpressionOrigin>
+                            <Value type="int" value="0"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="34_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="anchor" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="37">
+                          <ExpressionOrigin>
+                            <Value type="int" value="18"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="22_pnlFiltroEmpleadoHvsE"/>
+                      <StatementProvider type="CodeMethod">
+                        <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="38_btnBuscarE">
+                          <CodeVariable name="btnBuscarE" type="8194" declaredType="javax.swing.JButton"/>
+                          <ExpressionOrigin>
+                            <ExpressionProvider type="ComponentRef">
+                              <ComponentRef name="btnBuscarE"/>
+                            </ExpressionProvider>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                        <CodeExpression id="34_gridBagConstraints"/>
+                      </Parameters>
+                    </CodeStatement>
+                  </LayoutCode>
+                </Container>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="Center"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="org.jdesktop.swingx.JXTable" name="tblEmpleadosHvsE">
+                      <Properties>
+                        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                          <Table columnCount="0" rowCount="4"/>
+                        </Property>
+                        <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                          <TableColumnModel selectionModel="0"/>
+                        </Property>
+                        <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                          <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="pnlButtonsEHvsE">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="Last"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout">
+                    <Property name="verticalGap" type="int" value="0"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JButton" name="btnNuevoE">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Agregar Empleado(s)"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="btnModificarE">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Modificar"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="btnEliminarE">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Eliminar"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="btnImportarE">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Importar Empleados"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="pnlEvsH">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Empleados vs Horario">
+                <Property name="tabTitle" type="java.lang.String" value="Empleados vs Horario"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+            <Property name="columns" type="int" value="2"/>
+            <Property name="rows" type="int" value="1"/>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="pnlEmpleadosEvsH">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Empleados"/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="pnlFiltroEmpleadoEvsH">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Filtrar por:"/>
+                      </Border>
+                    </Property>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="First"/>
+                    </Constraint>
+                  </Constraints>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jLabel3">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Nombres / Dni / C&#xf3;digo Modular:"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+                          <GridBagConstraints gridX="0" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtBuscarEEvsH">
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+                          <GridBagConstraints gridX="2" gridY="0" gridWidth="1" gridHeight="1" fill="2" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.1" weightY="0.0"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="btnBuscarEEvsH">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Buscar"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+                          <GridBagConstraints gridX="4" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                  </SubComponents>
+                  <LayoutCode>
+                    <CodeStatement>
+                      <CodeExpression id="39_pnlFiltroEmpleadoEvsHLayout">
+                        <CodeVariable name="pnlFiltroEmpleadoEvsHLayout" type="4096" declaredType="java.awt.GridBagLayout"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="CodeConstructor">
+                            <CodeConstructor class="java.awt.GridBagLayout" parameterTypes=""/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeExpression">
+                        <CodeExpression id="39_pnlFiltroEmpleadoEvsHLayout"/>
+                      </StatementProvider>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="39_pnlFiltroEmpleadoEvsHLayout"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="columnWidths" class="java.awt.GridBagLayout"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="40">
+                          <ExpressionOrigin>
+                            <Value type="[I" editor="org.netbeans.modules.form.layoutsupport.delegates.GridBagLayoutSupport$IntArrayPropertyEditor">
+                              <PropertyValue value="[0, 5, 0, 5, 0]"/>
+                            </Value>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="39_pnlFiltroEmpleadoEvsHLayout"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="rowHeights" class="java.awt.GridBagLayout"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="41">
+                          <ExpressionOrigin>
+                            <Value type="[I" editor="org.netbeans.modules.form.layoutsupport.delegates.GridBagLayoutSupport$IntArrayPropertyEditor">
+                              <PropertyValue value="[0]"/>
+                            </Value>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="42_pnlFiltroEmpleadoEvsH">
+                        <CodeVariable name="pnlFiltroEmpleadoEvsH" type="8194" declaredType="javax.swing.JPanel"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="ComponentRef">
+                            <ComponentRef name="pnlFiltroEmpleadoEvsH"/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeMethod">
+                        <CodeMethod name="setLayout" class="java.awt.Container" parameterTypes="java.awt.LayoutManager"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="39_pnlFiltroEmpleadoEvsHLayout"/>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="43_gridBagConstraints">
+                        <CodeVariable name="gridBagConstraints"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="CodeConstructor">
+                            <CodeConstructor class="java.awt.GridBagConstraints" parameterTypes=""/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeExpression">
+                        <CodeExpression id="43_gridBagConstraints"/>
+                      </StatementProvider>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="43_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="44">
+                          <ExpressionOrigin>
+                            <Value type="int" value="0"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="43_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="45">
+                          <ExpressionOrigin>
+                            <Value type="int" value="0"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="42_pnlFiltroEmpleadoEvsH"/>
+                      <StatementProvider type="CodeMethod">
+                        <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="46_jLabel3">
+                          <CodeVariable name="jLabel3" type="8194" declaredType="javax.swing.JLabel"/>
+                          <ExpressionOrigin>
+                            <ExpressionProvider type="ComponentRef">
+                              <ComponentRef name="jLabel3"/>
+                            </ExpressionProvider>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                        <CodeExpression id="43_gridBagConstraints"/>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="47_gridBagConstraints">
+                        <CodeVariable name="gridBagConstraints"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="CodeConstructor">
+                            <CodeConstructor class="java.awt.GridBagConstraints" parameterTypes=""/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeExpression">
+                        <CodeExpression id="47_gridBagConstraints"/>
+                      </StatementProvider>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="47_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="48">
+                          <ExpressionOrigin>
+                            <Value type="int" value="2"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="47_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="49">
+                          <ExpressionOrigin>
+                            <Value type="int" value="0"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="47_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="fill" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="50">
+                          <ExpressionOrigin>
+                            <Value type="int" value="2"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="47_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="weightx" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="51">
+                          <ExpressionOrigin>
+                            <Value type="double" value="0.1"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="42_pnlFiltroEmpleadoEvsH"/>
+                      <StatementProvider type="CodeMethod">
+                        <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="52_txtBuscarEEvsH">
+                          <CodeVariable name="txtBuscarEEvsH" type="8194" declaredType="javax.swing.JTextField"/>
+                          <ExpressionOrigin>
+                            <ExpressionProvider type="ComponentRef">
+                              <ComponentRef name="txtBuscarEEvsH"/>
+                            </ExpressionProvider>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                        <CodeExpression id="47_gridBagConstraints"/>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="53_gridBagConstraints">
+                        <CodeVariable name="gridBagConstraints"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="CodeConstructor">
+                            <CodeConstructor class="java.awt.GridBagConstraints" parameterTypes=""/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeExpression">
+                        <CodeExpression id="53_gridBagConstraints"/>
+                      </StatementProvider>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="53_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="54">
+                          <ExpressionOrigin>
+                            <Value type="int" value="4"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="53_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="55">
+                          <ExpressionOrigin>
+                            <Value type="int" value="0"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="42_pnlFiltroEmpleadoEvsH"/>
+                      <StatementProvider type="CodeMethod">
+                        <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="56_btnBuscarEEvsH">
+                          <CodeVariable name="btnBuscarEEvsH" type="8194" declaredType="javax.swing.JButton"/>
+                          <ExpressionOrigin>
+                            <ExpressionProvider type="ComponentRef">
+                              <ComponentRef name="btnBuscarEEvsH"/>
+                            </ExpressionProvider>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                        <CodeExpression id="53_gridBagConstraints"/>
+                      </Parameters>
+                    </CodeStatement>
+                  </LayoutCode>
+                </Container>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="Center"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="org.jdesktop.swingx.JXTable" name="tblEmpleadosEvsH">
+                      <Properties>
+                        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                          <Table columnCount="0" rowCount="4"/>
+                        </Property>
+                        <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                          <TableColumnModel selectionModel="0"/>
+                        </Property>
+                        <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                          <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="pnlHorariosEvsH">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="Horarios"/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="pnlParamBusquedaEvsH">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Par&#xe1;metros de b&#xfa;squeda"/>
+                      </Border>
+                    </Property>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="First"/>
+                    </Constraint>
+                  </Constraints>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jLabel4">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Nombre / C&#xf3;digo / Documento:"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+                          <GridBagConstraints gridX="0" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtBuscarHEvsH">
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+                          <GridBagConstraints gridX="2" gridY="0" gridWidth="1" gridHeight="1" fill="2" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.1" weightY="0.0"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="btnBuscarHEvsH">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Buscar"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
+                          <GridBagConstraints gridX="4" gridY="0" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                  </SubComponents>
+                  <LayoutCode>
+                    <CodeStatement>
+                      <CodeExpression id="57_pnlParamBusquedaEvsHLayout">
+                        <CodeVariable name="pnlParamBusquedaEvsHLayout" type="4096" declaredType="java.awt.GridBagLayout"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="CodeConstructor">
+                            <CodeConstructor class="java.awt.GridBagLayout" parameterTypes=""/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeExpression">
+                        <CodeExpression id="57_pnlParamBusquedaEvsHLayout"/>
+                      </StatementProvider>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="57_pnlParamBusquedaEvsHLayout"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="columnWidths" class="java.awt.GridBagLayout"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="58">
+                          <ExpressionOrigin>
+                            <Value type="[I" editor="org.netbeans.modules.form.layoutsupport.delegates.GridBagLayoutSupport$IntArrayPropertyEditor">
+                              <PropertyValue value="[0, 5, 0, 5, 0]"/>
+                            </Value>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="57_pnlParamBusquedaEvsHLayout"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="rowHeights" class="java.awt.GridBagLayout"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="59">
+                          <ExpressionOrigin>
+                            <Value type="[I" editor="org.netbeans.modules.form.layoutsupport.delegates.GridBagLayoutSupport$IntArrayPropertyEditor">
+                              <PropertyValue value="[0]"/>
+                            </Value>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="60_pnlParamBusquedaEvsH">
+                        <CodeVariable name="pnlParamBusquedaEvsH" type="8194" declaredType="javax.swing.JPanel"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="ComponentRef">
+                            <ComponentRef name="pnlParamBusquedaEvsH"/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeMethod">
+                        <CodeMethod name="setLayout" class="java.awt.Container" parameterTypes="java.awt.LayoutManager"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="57_pnlParamBusquedaEvsHLayout"/>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="61_gridBagConstraints">
+                        <CodeVariable name="gridBagConstraints"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="CodeConstructor">
+                            <CodeConstructor class="java.awt.GridBagConstraints" parameterTypes=""/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeExpression">
+                        <CodeExpression id="61_gridBagConstraints"/>
+                      </StatementProvider>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="61_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="62">
+                          <ExpressionOrigin>
+                            <Value type="int" value="0"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="61_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="63">
+                          <ExpressionOrigin>
+                            <Value type="int" value="0"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="60_pnlParamBusquedaEvsH"/>
+                      <StatementProvider type="CodeMethod">
+                        <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="64_jLabel4">
+                          <CodeVariable name="jLabel4" type="8194" declaredType="javax.swing.JLabel"/>
+                          <ExpressionOrigin>
+                            <ExpressionProvider type="ComponentRef">
+                              <ComponentRef name="jLabel4"/>
+                            </ExpressionProvider>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                        <CodeExpression id="61_gridBagConstraints"/>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="65_gridBagConstraints">
+                        <CodeVariable name="gridBagConstraints"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="CodeConstructor">
+                            <CodeConstructor class="java.awt.GridBagConstraints" parameterTypes=""/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeExpression">
+                        <CodeExpression id="65_gridBagConstraints"/>
+                      </StatementProvider>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="65_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="66">
+                          <ExpressionOrigin>
+                            <Value type="int" value="2"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="65_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="67">
+                          <ExpressionOrigin>
+                            <Value type="int" value="0"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="65_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="fill" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="68">
+                          <ExpressionOrigin>
+                            <Value type="int" value="2"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="65_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="weightx" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="69">
+                          <ExpressionOrigin>
+                            <Value type="double" value="0.1"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="60_pnlParamBusquedaEvsH"/>
+                      <StatementProvider type="CodeMethod">
+                        <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="70_txtBuscarHEvsH">
+                          <CodeVariable name="txtBuscarHEvsH" type="8194" declaredType="javax.swing.JTextField"/>
+                          <ExpressionOrigin>
+                            <ExpressionProvider type="ComponentRef">
+                              <ComponentRef name="txtBuscarHEvsH"/>
+                            </ExpressionProvider>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                        <CodeExpression id="65_gridBagConstraints"/>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="71_gridBagConstraints">
+                        <CodeVariable name="gridBagConstraints"/>
+                        <ExpressionOrigin>
+                          <ExpressionProvider type="CodeConstructor">
+                            <CodeConstructor class="java.awt.GridBagConstraints" parameterTypes=""/>
+                          </ExpressionProvider>
+                        </ExpressionOrigin>
+                      </CodeExpression>
+                      <StatementProvider type="CodeExpression">
+                        <CodeExpression id="71_gridBagConstraints"/>
+                      </StatementProvider>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="71_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridx" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="72">
+                          <ExpressionOrigin>
+                            <Value type="int" value="4"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="71_gridBagConstraints"/>
+                      <StatementProvider type="CodeField">
+                        <CodeField name="gridy" class="java.awt.GridBagConstraints"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="73">
+                          <ExpressionOrigin>
+                            <Value type="int" value="0"/>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                      </Parameters>
+                    </CodeStatement>
+                    <CodeStatement>
+                      <CodeExpression id="60_pnlParamBusquedaEvsH"/>
+                      <StatementProvider type="CodeMethod">
+                        <CodeMethod name="add" class="java.awt.Container" parameterTypes="java.awt.Component, java.lang.Object"/>
+                      </StatementProvider>
+                      <Parameters>
+                        <CodeExpression id="74_btnBuscarHEvsH">
+                          <CodeVariable name="btnBuscarHEvsH" type="8194" declaredType="javax.swing.JButton"/>
+                          <ExpressionOrigin>
+                            <ExpressionProvider type="ComponentRef">
+                              <ComponentRef name="btnBuscarHEvsH"/>
+                            </ExpressionProvider>
+                          </ExpressionOrigin>
+                        </CodeExpression>
+                        <CodeExpression id="71_gridBagConstraints"/>
+                      </Parameters>
+                    </CodeStatement>
+                  </LayoutCode>
+                </Container>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="Center"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="org.jdesktop.swingx.JXTable" name="tblHorariosEvsH">
+                      <Properties>
+                        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                          <Table columnCount="0" rowCount="4"/>
+                        </Property>
+                        <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                          <TableColumnModel selectionModel="0"/>
+                        </Property>
+                        <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                          <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="pnlButtonsHEvsH">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="Last"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout">
+                    <Property name="verticalGap" type="int" value="0"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JButton" name="btnNuevoHEvsH">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Agregar Horario"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="btnModificarAsigHEvsH">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Modificar"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="btnEliminarHEvsH">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Eliminar"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
