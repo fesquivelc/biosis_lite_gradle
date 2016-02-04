@@ -17,6 +17,7 @@ import com.biosis.biosislite.entidades.TipoPermiso;
 import com.biosis.biosislite.entidades.escalafon.Empleado;
 import com.biosis.biosislite.utiles.UsuarioActivo;
 import com.biosis.biosislite.vistas.dialogos.DlgEmpleado;
+import com.biosis.biosislite.vistas.dialogos.DlgPermisoCRU;
 import com.biosis.biosislite.vistas.dialogos.DlgTipoPermiso;
 import com.biosis.biosislite.vistas.modelos.MTAsignacionPermiso;
 import com.biosis.biosislite.vistas.modelos.MTEmpleado;
@@ -55,6 +56,7 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
     private Empleado empleadoSeleccionado;
     private AsignacionPermisoControlador ac;
     private final ReporteUtil reporteador;
+    private DlgPermisoCRU dlgPermisoCRU;
 
     public AsignarPermiso() {
         initComponents();
@@ -63,7 +65,6 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         inicializar();
         bindeoSalvaje();
         reporteador = new ReporteUtil();
-        this.radLote.setVisible(false);
 
     }
 
@@ -77,11 +78,11 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        opciones = new javax.swing.ButtonGroup();
         pnlListado = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         btnNuevo = new javax.swing.JButton();
         btnModificar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -104,40 +105,6 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         jLabel9 = new javax.swing.JLabel();
         btnBuscar = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        pnlDatos = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        tblEmpleados = new org.jdesktop.swingx.JXTable();
-        btnAgregar = new javax.swing.JButton();
-        btnQuitar = new javax.swing.JButton();
-        txtTipoPermiso = new javax.swing.JTextField();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        txtMotivo = new javax.swing.JTextArea();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
-        txtDocumento = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        spHoraFin = new javax.swing.JSpinner();
-        spHoraInicio = new javax.swing.JSpinner();
-        dcFechaFin = new com.toedter.calendar.JDateChooser();
-        dcFechaInicio = new com.toedter.calendar.JDateChooser();
-        pnlOpcion = new javax.swing.JPanel();
-        radFecha = new javax.swing.JRadioButton();
-        radHora = new javax.swing.JRadioButton();
-        radLote = new javax.swing.JRadioButton();
-        jPanel5 = new javax.swing.JPanel();
-        btnGuardar = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
-        opciones.add(radFecha);
-        opciones.add(radHora);
-        opciones.add(radLote);
 
         setClosable(true);
         setMaximizable(true);
@@ -155,6 +122,7 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
 
         jPanel3.setLayout(new java.awt.GridLayout(1, 0, 10, 0));
 
+        btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Add_24x24.png"))); // NOI18N
         btnNuevo.setText("Nuevo");
         btnNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,6 +131,7 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         });
         jPanel3.add(btnNuevo);
 
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Edit_24x24.png"))); // NOI18N
         btnModificar.setText("Modificar");
         btnModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,6 +140,16 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         });
         jPanel3.add(btnModificar);
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Information_24x24.png"))); // NOI18N
+        jButton1.setText("Ver información");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton1);
+
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Delete_24x24.png"))); // NOI18N
         jButton3.setText("Eliminar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,6 +158,7 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         });
         jPanel3.add(jButton3);
 
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Print_24x24.png"))); // NOI18N
         jButton2.setText("Imprimir boleta");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,11 +173,6 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         pnlListado.add(jPanel3, gridBagConstraints);
 
         tblTabla.setHorizontalScrollEnabled(true);
-        tblTabla.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                tblTablaMouseReleased(evt);
-            }
-        });
         jScrollPane1.setViewportView(tblTabla);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -273,14 +248,17 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         gridBagConstraints.gridy = 4;
         pnlListado.add(pnlNavegacion, gridBagConstraints);
 
-        pnlBusqueda.setLayout(new java.awt.GridBagLayout());
+        java.awt.GridBagLayout pnlBusquedaLayout = new java.awt.GridBagLayout();
+        pnlBusquedaLayout.columnWidths = new int[] {0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0};
+        pnlBusquedaLayout.rowHeights = new int[] {0, 5, 0, 5, 0};
+        pnlBusqueda.setLayout(pnlBusquedaLayout);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
         pnlBusqueda.add(dcFechaInicioBusqueda, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 2;
         pnlBusqueda.add(dcFechaFinBusqueda, gridBagConstraints);
 
         txtEmpleado.setEditable(false);
@@ -295,9 +273,9 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.gridwidth = 7;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 0.1;
         pnlBusqueda.add(txtEmpleado, gridBagConstraints);
@@ -316,30 +294,31 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridx = 12;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         pnlBusqueda.add(btnLimpiar, gridBagConstraints);
 
-        jButton4.setText("...");
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/User_16x16.png"))); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridx = 10;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         pnlBusqueda.add(jButton4, gridBagConstraints);
 
         jLabel9.setText("-");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         pnlBusqueda.add(jLabel9, gridBagConstraints);
 
+        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Find_16x16.png"))); // NOI18N
         btnBuscar.setText("Buscar");
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -348,14 +327,14 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridy = 4;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         pnlBusqueda.add(btnBuscar, gridBagConstraints);
 
         jLabel5.setText("Fechas:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridy = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_END;
         pnlBusqueda.add(jLabel5, gridBagConstraints);
 
@@ -375,296 +354,24 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         getContentPane().add(pnlListado, gridBagConstraints);
 
-        pnlDatos.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos de permiso"));
-        java.awt.GridBagLayout jPanel2Layout = new java.awt.GridBagLayout();
-        jPanel2Layout.columnWidths = new int[] {0};
-        jPanel2Layout.rowHeights = new int[] {0, 5, 0};
-        pnlDatos.setLayout(jPanel2Layout);
-
-        java.awt.GridBagLayout jPanel4Layout = new java.awt.GridBagLayout();
-        jPanel4Layout.columnWidths = new int[] {0, 5, 0, 5, 0, 5, 0};
-        jPanel4Layout.rowHeights = new int[] {0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0};
-        jPanel4.setLayout(jPanel4Layout);
-
-        jLabel1.setText("Tipo de permiso:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel4.add(jLabel1, gridBagConstraints);
-
-        jLabel2.setText("Empleados:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 18;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel4.add(jLabel2, gridBagConstraints);
-
-        jLabel3.setText("Motivo:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel4.add(jLabel3, gridBagConstraints);
-
-        tblEmpleados.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                tblEmpleadosMouseReleased(evt);
-            }
-        });
-        jScrollPane3.setViewportView(tblEmpleados);
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 18;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.gridheight = 5;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 0.1;
-        gridBagConstraints.weighty = 0.1;
-        jPanel4.add(jScrollPane3, gridBagConstraints);
-
-        btnAgregar.setText("+");
-        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 18;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        jPanel4.add(btnAgregar, gridBagConstraints);
-
-        btnQuitar.setText("-");
-        btnQuitar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnQuitarActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 20;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
-        jPanel4.add(btnQuitar, gridBagConstraints);
-
-        txtTipoPermiso.setEditable(false);
-        txtTipoPermiso.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTipoPermisoActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 0.1;
-        jPanel4.add(txtTipoPermiso, gridBagConstraints);
-
-        txtMotivo.setColumns(20);
-        txtMotivo.setRows(5);
-        txtMotivo.setTabSize(4);
-        jScrollPane2.setViewportView(txtMotivo);
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.gridheight = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weighty = 0.1;
-        jPanel4.add(jScrollPane2, gridBagConstraints);
-
-        jLabel4.setText("Hora inicio:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 14;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel4.add(jLabel4, gridBagConstraints);
-
-        jLabel7.setText("Fecha inicio:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 10;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel4.add(jLabel7, gridBagConstraints);
-
-        jLabel8.setText("Opción:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel4.add(jLabel8, gridBagConstraints);
-
-        jButton1.setText("...");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 2;
-        jPanel4.add(jButton1, gridBagConstraints);
-
-        jLabel10.setText("Documento:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel4.add(jLabel10, gridBagConstraints);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        jPanel4.add(txtDocumento, gridBagConstraints);
-
-        jLabel11.setText("Hora fin:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 16;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel4.add(jLabel11, gridBagConstraints);
-
-        jLabel12.setText("Fecha fin:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 12;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel4.add(jLabel12, gridBagConstraints);
-
-        spHoraFin.setModel(new javax.swing.SpinnerDateModel());
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 16;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel4.add(spHoraFin, gridBagConstraints);
-
-        spHoraInicio.setModel(new javax.swing.SpinnerDateModel());
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 14;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel4.add(spHoraInicio, gridBagConstraints);
-
-        dcFechaFin.setDateFormatString("dd.MM.yyyy");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 12;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel4.add(dcFechaFin, gridBagConstraints);
-
-        dcFechaInicio.setDateFormatString("dd.MM.yyyy");
-        dcFechaInicio.setMinimumSize(new java.awt.Dimension(130, 20));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 10;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel4.add(dcFechaInicio, gridBagConstraints);
-
-        pnlOpcion.setLayout(new java.awt.GridLayout(1, 0));
-
-        radFecha.setSelected(true);
-        radFecha.setText("Por fecha");
-        radFecha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radFechaActionPerformed(evt);
-            }
-        });
-        pnlOpcion.add(radFecha);
-
-        radHora.setText("Por hora");
-        radHora.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radHoraActionPerformed(evt);
-            }
-        });
-        pnlOpcion.add(radHora);
-
-        radLote.setText("Por lote");
-        radLote.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radLoteActionPerformed(evt);
-            }
-        });
-        pnlOpcion.add(radLote);
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel4.add(pnlOpcion, gridBagConstraints);
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
-        gridBagConstraints.weightx = 0.2;
-        gridBagConstraints.weighty = 0.1;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        pnlDatos.add(jPanel4, gridBagConstraints);
-
-        jPanel5.setLayout(new java.awt.GridLayout(1, 0, 10, 0));
-
-        btnGuardar.setText("Guardar");
-        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarActionPerformed(evt);
-            }
-        });
-        jPanel5.add(btnGuardar);
-
-        btnCancelar.setText("Cancelar");
-        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelarActionPerformed(evt);
-            }
-        });
-        jPanel5.add(btnCancelar);
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        pnlDatos.add(jPanel5, gridBagConstraints);
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 0.2;
-        gridBagConstraints.weighty = 0.1;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
-        getContentPane().add(pnlDatos, gridBagConstraints);
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        // TODO add your handling code here:
-        this.accion = 0;
-        this.controles(accion);
-        FormularioUtil.limpiarComponente(this.pnlDatos);
-    }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
         // TODO add your handling code here:
         this.accion = Controlador.NUEVO;
         controlador.prepararCrear();
-        this.controles(accion);
-        integrantes.clear();
+        dlgPermisoCRU = new DlgPermisoCRU(this, controlador.getSeleccionado(), accion);
+        dlgPermisoCRU.setVisible(true);
+        if (dlgPermisoCRU.isAccionRealizada()) {
+            Permiso permiso = dlgPermisoCRU.getPermiso();
+            if (permiso != null) {
+                busqueda(permiso);
+            }
+        }
+
+//        this.controles(accion);
+//        integrantes.clear();
     }//GEN-LAST:event_btnNuevoActionPerformed
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
@@ -674,110 +381,18 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
             this.accion = Controlador.MODIFICAR;
             tipoSeleccionado = this.listado.get(fila).getPermiso().getTipoPermiso();
             controlador.setSeleccionado(this.listado.get(fila).getPermiso());
-            this.controles(accion);
-            FormularioUtil.activarComponente(txtTipoPermiso, false);
+
+            dlgPermisoCRU = new DlgPermisoCRU(this, controlador.getSeleccionado(), accion);
+            dlgPermisoCRU.setVisible(true);
+
+            if (dlgPermisoCRU.isAccionRealizada()) {
+                Permiso permiso = dlgPermisoCRU.getPermiso();
+                if (permiso != null) {
+                    busqueda(permiso);
+                }
+            }
         }
     }//GEN-LAST:event_btnModificarActionPerformed
-
-    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        // TODO add your handling code here:
-        if (erroresFormulario()) {
-            return;
-        }
-        if (FormularioUtil.dialogoConfirmar(this, accion)) {
-            Permiso seleccionada = this.controlador.getSeleccionado();
-
-            FormularioUtil.convertirMayusculas(this.pnlDatos);
-
-//            if (accion == Controlador.NUEVO) {
-//                seleccionada.setCodigo(txtTipoPermiso.getText());
-//            }
-            seleccionada.setMotivo(txtMotivo.getText());
-            seleccionada.setTipoPermiso(tipoSeleccionado);
-            seleccionada.setFechaInicio(dcFechaInicio.getDate());
-            seleccionada.setPorFecha(radFecha.isSelected());
-            seleccionada.setDocumento(txtDocumento.getText());
-            Long diferencia;
-            if (radFecha.isSelected()) {
-                seleccionada.setFechaFin(dcFechaFin.getDate());
-                diferencia = seleccionada.getFechaFin().getTime() - seleccionada.getFechaInicio().getTime();
-                seleccionada.setOpcion('F');
-            } else {
-                seleccionada.setCubreEntrada(false);
-                seleccionada.setCubreSalida(false);
-                seleccionada.setHoraInicio((Date) spHoraInicio.getValue());
-                seleccionada.setHoraFin((Date) spHoraFin.getValue());
-                seleccionada.setFechaFin((Date) dcFechaInicio.getDate());
-                seleccionada.setOpcion('H');
-                diferencia = FechaUtil.soloHora(seleccionada.getHoraFin()).getTime() - FechaUtil.soloHora(seleccionada.getHoraInicio()).getTime();
-            }
-
-            BigDecimal diferenciaMin = new BigDecimal(diferencia / (60 * 1000 * 60));
-
-            seleccionada.setDiferencia(diferenciaMin);
-
-            List<String> dnis = new ArrayList<>();
-            for (AsignacionPermiso asignacion : seleccionada.getAsignacionPermisoList()) {
-                dnis.add(asignacion.getEmpleado().getNroDocumento());
-                //System.out.println(asignacion.getEmpleado());
-            }
-
-            retrocederTiempo(dnis, seleccionada.getFechaInicio());
-
-            if (controlador.accion(accion)) {
-                FormularioUtil.mensajeExito(this, accion);
-                this.accion = 0;
-                FormularioUtil.limpiarComponente(this.pnlDatos);
-                this.integrantes.clear();
-                this.controles(accion);
-                
-                this.busqueda();
-
-                if (FormularioUtil.dialogoConfirmar(this, 4)) {
-                    this.imprimirBoleta(seleccionada);
-                }
-            } else {
-                FormularioUtil.mensajeError(this, accion);
-            }
-
-        }
-    }//GEN-LAST:event_btnGuardarActionPerformed
-
-    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-        // TODO add your handling code here:
-        DlgEmpleado dialogo = new DlgEmpleado(this);
-        dialogo.setVisible(true);
-    }//GEN-LAST:event_btnAgregarActionPerformed
-
-    private void tblTablaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblTablaMouseReleased
-        // TODO add your handling code here:
-        int fila = tblTabla.getSelectedRow();
-        if (fila != -1) {
-            Permiso permiso = listado.get(fila).getPermiso();
-            mostrar(permiso);
-//            FormularioUtil.activarComponente(this.btnImprimirTodo, true);
-        }
-    }//GEN-LAST:event_tblTablaMouseReleased
-
-    private void btnQuitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuitarActionPerformed
-        // TODO add your handling code here:
-        int fila = tblEmpleados.getSelectedRow();
-        if (fila != -1) {
-            quitarEmpleado(fila);
-        }
-    }//GEN-LAST:event_btnQuitarActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        DlgTipoPermiso dialogo = new DlgTipoPermiso(this);
-        tipoSeleccionado = dialogo.getSeleccionado();
-        if (tipoSeleccionado == null) {
-            System.out.println("ES NULL");
-            txtTipoPermiso.setText("");
-        } else {
-            txtTipoPermiso.setText(tipoSeleccionado.getNombre());
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtEmpleadoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEmpleadoKeyReleased
         // TODO add your handling code here:
@@ -811,7 +426,7 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         // TODO add your handling code here:
         busqueda();
-        
+
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnPrimeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrimeroActionPerformed
@@ -857,36 +472,9 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void tblEmpleadosMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblEmpleadosMouseReleased
-        // TODO add your handling code here:
-        int fila;
-        if ((fila = tblEmpleados.getSelectedRow()) != -1) {
-            mostrarRecord(integrantes.get(fila));
-        }
-    }//GEN-LAST:event_tblEmpleadosMouseReleased
-
     private void txtEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmpleadoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEmpleadoActionPerformed
-
-    private void radFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radFechaActionPerformed
-        // TODO add your handling code here:
-        opciones();
-    }//GEN-LAST:event_radFechaActionPerformed
-
-    private void radHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radHoraActionPerformed
-        // TODO add your handling code here:
-        opciones();
-    }//GEN-LAST:event_radHoraActionPerformed
-
-    private void radLoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radLoteActionPerformed
-        // TODO add your handling code here:
-        opciones();
-    }//GEN-LAST:event_radLoteActionPerformed
-
-    private void txtTipoPermisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTipoPermisoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtTipoPermisoActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -900,7 +488,7 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
                     FormularioUtil.mensajeExito(this, accion);
                     accion = 0;
                     this.integrantes.clear();
-                    this.controles(accion);
+//                    this.controles(accion);
                     this.actualizarTabla();
                 }
 
@@ -908,95 +496,82 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        int fila = tblTabla.getSelectedRow();
+        if (fila != -1) {
+            this.accion = Controlador.LEER;
+            tipoSeleccionado = this.listado.get(fila).getPermiso().getTipoPermiso();
+
+            dlgPermisoCRU = new DlgPermisoCRU(this, this.listado.get(fila).getPermiso(), accion);
+            dlgPermisoCRU.setVisible(true);
+
+            if (dlgPermisoCRU.isAccionRealizada()) {
+                Permiso permiso = dlgPermisoCRU.getPermiso();
+                if (permiso != null) {
+                    busqueda(permiso);
+                }
+            }
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnAnterior;
     private javax.swing.JButton btnBuscar;
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnLimpiar;
     private javax.swing.JButton btnModificar;
     private javax.swing.JButton btnNuevo;
     private javax.swing.JButton btnPrimero;
-    private javax.swing.JButton btnQuitar;
     private javax.swing.JButton btnSiguiente;
     private javax.swing.JButton btnUltimo;
     private javax.swing.JComboBox cboTamanio;
-    private com.toedter.calendar.JDateChooser dcFechaFin;
     private com.toedter.calendar.JDateChooser dcFechaFinBusqueda;
-    private com.toedter.calendar.JDateChooser dcFechaInicio;
     private com.toedter.calendar.JDateChooser dcFechaInicioBusqueda;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private org.jdesktop.swingx.JXBusyLabel lblBusqueda;
-    private javax.swing.ButtonGroup opciones;
     private javax.swing.JPanel pnlBusqueda;
-    private javax.swing.JPanel pnlDatos;
     private javax.swing.JPanel pnlListado;
     private javax.swing.JPanel pnlNavegacion;
-    private javax.swing.JPanel pnlOpcion;
-    private javax.swing.JRadioButton radFecha;
-    private javax.swing.JRadioButton radHora;
-    private javax.swing.JRadioButton radLote;
-    private javax.swing.JSpinner spHoraFin;
-    private javax.swing.JSpinner spHoraInicio;
     private javax.swing.JSpinner spPagina;
-    private org.jdesktop.swingx.JXTable tblEmpleados;
     private org.jdesktop.swingx.JXTable tblTabla;
-    private javax.swing.JTextField txtDocumento;
     private javax.swing.JTextField txtEmpleado;
-    private javax.swing.JTextArea txtMotivo;
-    private javax.swing.JTextField txtTipoPermiso;
     private javax.swing.JTextField txtTotal;
     // End of variables declaration//GEN-END:variables
 
-    private void mostrar(Permiso permiso) {
-        txtMotivo.setText(permiso.getMotivo());
-        txtTipoPermiso.setText(permiso.getTipoPermiso().getNombre());
-        this.radFecha.setSelected(permiso.isPorFecha());
-        dcFechaInicio.setDate(permiso.getFechaInicio());
-        txtDocumento.setText(permiso.getDocumento());
-        if (permiso.isPorFecha()) {
-            Calendar cal = Calendar.getInstance();
-            cal.set(Calendar.HOUR_OF_DAY, 0);
-            cal.set(Calendar.MINUTE, 0);
-            cal.set(Calendar.SECOND, 0);
-            dcFechaFin.setDate(permiso.getFechaFin());
-            spHoraInicio.setValue(cal.getTime());
-            spHoraFin.setValue(cal.getTime());
-        } else {
-            dcFechaFin.setDate(permiso.getFechaInicio());
-            spHoraInicio.setValue(permiso.getHoraInicio());
-            spHoraFin.setValue(permiso.getHoraFin());
-        }
-
-        List<Empleado> empleados = obtenerListadoDNI(permiso.getAsignacionPermisoList());
-        if (!empleados.isEmpty()) {
-            mostrarIntegrantes(empleados);
-        }
-
-    }
-
+//    private void mostrar(Permiso permiso) {
+//        txtMotivo.setText(permiso.getMotivo());
+//        txtTipoPermiso.setText(permiso.getTipoPermiso().getNombre());
+//        this.radFecha.setSelected(permiso.isPorFecha());
+//        dcFechaInicio.setDate(permiso.getFechaInicio());
+//        txtDocumento.setText(permiso.getDocumento());
+//        if (permiso.isPorFecha()) {
+//            Calendar cal = Calendar.getInstance();
+//            cal.set(Calendar.HOUR_OF_DAY, 0);
+//            cal.set(Calendar.MINUTE, 0);
+//            cal.set(Calendar.SECOND, 0);
+//            dcFechaFin.setDate(permiso.getFechaFin());
+//            spHoraInicio.setValue(cal.getTime());
+//            spHoraFin.setValue(cal.getTime());
+//        } else {
+//            dcFechaFin.setDate(permiso.getFechaInicio());
+//            spHoraInicio.setValue(permiso.getHoraInicio());
+//            spHoraFin.setValue(permiso.getHoraFin());
+//        }
+//
+//        List<Empleado> empleados = obtenerListadoDNI(permiso.getAsignacionPermisoList());
+//        if (!empleados.isEmpty()) {
+//            mostrarIntegrantes(empleados);
+//        }
+//
+//    }
     private void bindeoSalvaje() {
         listado = new ArrayList<>();
         listado = ObservableCollections.observableList(listado);
@@ -1008,7 +583,7 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         MTAsignacionPermiso mt = new MTAsignacionPermiso(listado);
         MTEmpleado mtIntegrantes = new MTEmpleado(integrantes, columnasIntegrantes);
         tblTabla.setModel(mt);
-        tblEmpleados.setModel(mtIntegrantes);
+//        tblEmpleados.setModel(mtIntegrantes);
 
         actualizarTabla();
     }
@@ -1026,7 +601,7 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
     private void mostrarIntegrantes(List<Empleado> empleados) {
         integrantes.clear();
         integrantes.addAll(empleados);
-        tblEmpleados.packAll();
+//        tblEmpleados.packAll();
     }
 
     private void inicializar() {
@@ -1037,28 +612,26 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         ac = new AsignacionPermisoControlador();
 //        FormularioUtil.modeloSpinnerFechaHora(spFechaInicio, "dd/MM/yyyy");
 //        FormularioUtil.modeloSpinnerFechaHora(spFechaFin, "dd/MM/yyyy");
-        FormularioUtil.modeloSpinnerFechaHora(spHoraInicio, "HH:mm");
-        FormularioUtil.modeloSpinnerFechaHora(spHoraFin, "HH:mm");
-        this.controles(accion);
+//        FormularioUtil.modeloSpinnerFechaHora(spHoraInicio, "HH:mm");
+//        FormularioUtil.modeloSpinnerFechaHora(spHoraFin, "HH:mm");
+//        this.controles(accion);
     }
 
-    private void controles(int accion) {
-        boolean bandera = accion == Controlador.NUEVO || accion == Controlador.MODIFICAR;
-
-        FormularioUtil.activarComponente(this.pnlListado, !bandera);
-        FormularioUtil.activarComponente(this.pnlDatos, bandera);
-        FormularioUtil.activarComponente(this.txtEmpleado, false);
-//        FormularioUtil.activarComponente(this.btnImprimirTodo, false);
-
-        if (accion != Controlador.MODIFICAR) {
-            FormularioUtil.limpiarComponente(this.pnlDatos);
-        }
-
-        
-        this.txtTipoPermiso.setEditable(false);
-        checkPorFecha(accion);
-    }
-
+//    private void controles(int accion) {
+//        boolean bandera = accion == Controlador.NUEVO || accion == Controlador.MODIFICAR;
+//
+//        FormularioUtil.activarComponente(this.pnlListado, !bandera);
+////        FormularioUtil.activarComponente(this.pnlDatos, bandera);
+//        FormularioUtil.activarComponente(this.txtEmpleado, false);
+////        FormularioUtil.activarComponente(this.btnImprimirTodo, false);
+//
+//        if (accion != Controlador.MODIFICAR) {
+//            FormularioUtil.limpiarComponente(this.pnlDatos);
+//        }
+//
+//        this.txtTipoPermiso.setEditable(false);
+//        checkPorFecha(accion);
+//    }
     private List<Empleado> obtenerListadoDNI(List<AsignacionPermiso> detalles) {
         List<Empleado> empleados = new ArrayList<>();
         for (AsignacionPermiso detalle : detalles) {
@@ -1097,6 +670,15 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         System.out.println("LISTA: " + lista.size());
         listado.addAll(lista);
 
+        tblTabla.packAll();
+    }
+
+    private void buscar(Permiso permiso) {
+        tamanioPagina = Integer.parseInt(cboTamanio.getSelectedItem().toString());
+        listado.clear();
+//        permiso.getAsignacionPermisoList().stream().forEach(asig -> System.out.println(String.format("finicio: %s, ffin: %s", asig.getPermiso().getFechaInicio(), asig.getPermiso().getFechaFin())));
+        listado.addAll(permiso.getAsignacionPermisoList());
+        totalPaginas = 1;
         tblTabla.packAll();
     }
 
@@ -1191,7 +773,7 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
 
     private void imprimirBoleta(AsignacionPermiso seleccionada) {
 
-        File reporte = new File("reportes/reporte_papeleta_salida.jasper");
+        File reporte = Main.FICHERO_REPORTE_SALIDA;
 //        List<Long> lista = new ArrayList<>();
 
         Map<String, Object> parametros = new HashMap<>();
@@ -1212,99 +794,105 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
         tcac.retrocederTiempo(empleados, fechaInicio);
     }
 
-    private void checkPorFecha(int accion) {
-        if (accion != 0) {
-            FormularioUtil.activarComponente(dcFechaInicio, true);
-            FormularioUtil.activarComponente(dcFechaFin, radFecha.isSelected());
-
-            spHoraInicio.setEnabled(!radFecha.isSelected());
-            spHoraFin.setEnabled(!radFecha.isSelected());
-        }
-    }
-
-    private boolean erroresFormulario() {
-        int errores = 0;
-        Date fechaInicio = dcFechaInicio.getDate();
-
-        String mensaje = "";
-        if (integrantes.isEmpty()) {
-            errores++;
-            mensaje += ">Debe seleccionar uno o mas empleados\n";
-        }
-        if (radFecha.isSelected()) {
-            Date fechaFin = dcFechaFin.getDate();
-            if (fechaInicio.compareTo(fechaFin) > 0) {
-                errores++;
-                mensaje += ">La fecha de inicio debe ser menor que la fecha de fin\n";
-            }
-            //Traemos los dnis de los empleados
-            Permiso paraComprobar = this.controlador.getSeleccionado();
-            //List<String> dnis = new ArrayList<>();
-            for (AsignacionPermiso asignacion : paraComprobar.getAsignacionPermisoList()) {
-                //dnis.add(asignacion.getEmpleado());
-                System.out.println(asignacion.getEmpleado());
-//                List<AsignacionPermiso> lista = ac.buscarXFechaDni(asignacion.getEmpleado(), fechaInicio);
-                int conteoPorFecha = ac.contarXEmpleadoEntreFechaPorFecha(empleadoSeleccionado, fechaInicio, fechaFin);
-                if (conteoPorFecha == 0) {
-
-                } else if (accion != Controlador.MODIFICAR) {
-                    errores++;
-                    mensaje += "El empleado " + asignacion.getEmpleado() + " tiene conflicto con un permiso añadido anteriormente \n Ingrese otro rango de fechas \n";
-                    break;
-                }
-            }
-        }
-
-            //Traemos los permisos por dni
-        if (radHora.isSelected()) {
-            Date horaInicio = (Date) spHoraInicio.getValue();
-            Date horaFin = (Date) spHoraFin.getValue();
-            if (horaInicio.compareTo(horaFin) > 0) {
-                errores++;
-                mensaje += ">La hora de inicio debe ser menor que la hora de fin \n";
-            }
-            Permiso paraComprobar = this.controlador.getSeleccionado();
-            for (AsignacionPermiso asignacion : paraComprobar.getAsignacionPermisoList()) {
-                List<AsignacionPermiso> lista = ac.buscarXHora(asignacion.getEmpleado(), fechaInicio);
-                
-                Long conteoPorHora = lista.stream().filter(perm -> (horaInicio.compareTo(perm.getPermiso().getHoraInicio()) <= 0 && horaFin.compareTo(perm.getPermiso().getHoraInicio()) >= 0)
-                        || (perm.getPermiso().getHoraInicio().compareTo(horaInicio) <= 0 && perm.getPermiso().getHoraFin().compareTo(horaInicio) >= 0)).count();
-                if (conteoPorHora.intValue() == 0) {
-
-                } else {
-                    errores++;
-                    mensaje += ">El empleado " + asignacion.getEmpleado() + " tiene conflicto con un permiso añadido anteriormente \n Ingrese otro rango de horas\n";
-                    break;
-                }
-            }
-        }
-        if (errores > 0) {
-            JOptionPane.showMessageDialog(this, "Se ha(n) encontrado el(los) siguiente(s) error(es):\n" + mensaje, "Mensaje del sistema", JOptionPane.ERROR_MESSAGE);
-        }
-        return errores != 0;
-    }
-
-    private void mostrarRecord(Empleado empleado) {
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(empleado.getContratoList().get(0).getFechaInicio());
-
-        Date fInicio = dcFechaInicio.getDate();
-
-    }
-
-    private void opciones() {
-        FormularioUtil.activarComponente(dcFechaInicio, true);
-        FormularioUtil.activarComponente(dcFechaFin, radFecha.isSelected() || radLote.isSelected());
-        spHoraInicio.setEnabled(radHora.isSelected() || radLote.isSelected());
-        spHoraFin.setEnabled(radHora.isSelected() || radLote.isSelected());
-
-    }
-
+//    private void checkPorFecha(int accion) {
+//        if (accion != 0) {
+//            FormularioUtil.activarComponente(dcFechaInicio, true);
+//            FormularioUtil.activarComponente(dcFechaFin, radFecha.isSelected());
+//
+//            spHoraInicio.setEnabled(!radFecha.isSelected());
+//            spHoraFin.setEnabled(!radFecha.isSelected());
+//        }
+//    }
+//    private boolean erroresFormulario() {
+//        int errores = 0;
+//        Date fechaInicio = dcFechaInicio.getDate();
+//
+//        String mensaje = "";
+//        if (integrantes.isEmpty()) {
+//            errores++;
+//            mensaje += ">Debe seleccionar uno o mas empleados\n";
+//        }
+//        if (radFecha.isSelected()) {
+//            Date fechaFin = dcFechaFin.getDate();
+//            if (fechaInicio.compareTo(fechaFin) > 0) {
+//                errores++;
+//                mensaje += ">La fecha de inicio debe ser menor que la fecha de fin\n";
+//            }
+//            //Traemos los dnis de los empleados
+//            Permiso paraComprobar = this.controlador.getSeleccionado();
+//            //List<String> dnis = new ArrayList<>();
+//            for (AsignacionPermiso asignacion : paraComprobar.getAsignacionPermisoList()) {
+//                //dnis.add(asignacion.getEmpleado());
+//                System.out.println(asignacion.getEmpleado());
+////                List<AsignacionPermiso> lista = ac.buscarXFechaDni(asignacion.getEmpleado(), fechaInicio);
+//                int conteoPorFecha = ac.contarXEmpleadoEntreFechaPorFecha(empleadoSeleccionado, fechaInicio, fechaFin);
+//                if (conteoPorFecha == 0) {
+//
+//                } else if (accion != Controlador.MODIFICAR) {
+//                    errores++;
+//                    mensaje += "El empleado " + asignacion.getEmpleado() + " tiene conflicto con un permiso añadido anteriormente \n Ingrese otro rango de fechas \n";
+//                    break;
+//                }
+//            }
+//        }
+//
+//        //Traemos los permisos por dni
+//        if (radHora.isSelected()) {
+//            Date horaInicio = (Date) spHoraInicio.getValue();
+//            Date horaFin = (Date) spHoraFin.getValue();
+//            if (horaInicio.compareTo(horaFin) > 0) {
+//                errores++;
+//                mensaje += ">La hora de inicio debe ser menor que la hora de fin \n";
+//            }
+//            Permiso paraComprobar = this.controlador.getSeleccionado();
+//            for (AsignacionPermiso asignacion : paraComprobar.getAsignacionPermisoList()) {
+//                List<AsignacionPermiso> lista = ac.buscarXHora(asignacion.getEmpleado(), fechaInicio);
+//
+//                Long conteoPorHora = lista.stream().filter(perm -> (horaInicio.compareTo(perm.getPermiso().getHoraInicio()) <= 0 && horaFin.compareTo(perm.getPermiso().getHoraInicio()) >= 0)
+//                        || (perm.getPermiso().getHoraInicio().compareTo(horaInicio) <= 0 && perm.getPermiso().getHoraFin().compareTo(horaInicio) >= 0)).count();
+//                if (conteoPorHora.intValue() == 0) {
+//
+//                } else {
+//                    errores++;
+//                    mensaje += ">El empleado " + asignacion.getEmpleado() + " tiene conflicto con un permiso añadido anteriormente \n Ingrese otro rango de horas\n";
+//                    break;
+//                }
+//            }
+//        }
+//        if (errores > 0) {
+//            JOptionPane.showMessageDialog(this, "Se ha(n) encontrado el(los) siguiente(s) error(es):\n" + mensaje, "Mensaje del sistema", JOptionPane.ERROR_MESSAGE);
+//        }
+//        return errores != 0;
+//    }
+//    private void mostrarRecord(Empleado empleado) {
+//        Calendar cal = Calendar.getInstance();
+//        cal.setTime(empleado.getContratoList().get(0).getFechaInicio());
+//
+//        Date fInicio = dcFechaInicio.getDate();
+//
+//    }
+//
+//    private void opciones() {
+//        FormularioUtil.activarComponente(dcFechaInicio, true);
+//        FormularioUtil.activarComponente(dcFechaFin, radFecha.isSelected() || radLote.isSelected());
+//        spHoraInicio.setEnabled(radHora.isSelected() || radLote.isSelected());
+//        spHoraFin.setEnabled(radHora.isSelected() || radLote.isSelected());
+//
+//    }
     private void busqueda() {
         System.out.println("BUSCAR");
         lblBusqueda.setBusy(true);
         paginaActual = 1;
         buscar();
+        actualizarControlesNavegacion();
+        lblBusqueda.setBusy(false);
+    }
+
+    private void busqueda(Permiso permiso) {
+        System.out.println("BUSCAR");
+        lblBusqueda.setBusy(true);
+        paginaActual = 1;
+        buscar(permiso);
         actualizarControlesNavegacion();
         lblBusqueda.setBusy(false);
     }

@@ -20,4 +20,5 @@ public class HerramientaGeneral {
     public static final DateFormat formatoHoraMinutoSegundo = new SimpleDateFormat("HH:mm:ss");
     public static final DateFormat formatoFechaHora = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
     public static final Date horaFinal = new Date(104399000);
+    public static final Date horaNeutra = new Date(104399000);
 }

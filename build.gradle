@@ -1,7 +1,10 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassName = 'com.biosis.biosislite.Main'
+//mainClassName = 'com.biosis.biosislite.Main'
+//mainClassName = 'com.biosis.biosislite.vistas.dialogos.DlgPermisoCRU'
+mainClassName = 'com.biosis.biosislite.vistas.dialogos.DlgVacacionCRUD'
+//mainClassName = 'com.biosis.biosislite.utiles.FormGeneradorMarcacion'
 
 sourceCompatibility = '1.8'
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
@@ -35,7 +38,10 @@ dependencies {
         'log4j:log4j:1.2.17',
         'org.swinglabs:swingx:1.6.1',
         'com.opencsv:opencsv:3.6',
-        'com.sun.mail:javax.mail:1.5.0'
+        'com.sun.mail:javax.mail:1.5.0',
+        'org.codehaus.groovy:groovy-all:2.0.1',
+        'javax.servlet:servlet-api:2.4',
+        'joda-time:joda-time:2.1'
     )
 }
 
@@ -65,5 +71,18 @@ task copyConfig(type: Copy){
     from "config"
 }
 
+task copyReportes(type: Copy){
+    into "$buildDir/libs/MyReports"
+    from "MyReports"
+    include "*.jasper"
+}
+
+task copyImg(type: Copy){
+    into "$buildDir/libs/img"
+    from "img"
+}
+
+copyReportes.dependsOn(copyImg)
+copyConfig.dependsOn(copyReportes)
 copyToLib.dependsOn(copyConfig)
 build.dependsOn(copyToLib)

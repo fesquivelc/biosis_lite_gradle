@@ -72,7 +72,7 @@ public class RptRegistroAsistencia extends javax.swing.JInternalFrame {
     private final ReporteUtil reporteador;
     private final DateFormat dfFecha;
     private final EmpleadoControlador ec;
-    private final File archivo = new File("reportes/reporte_asistencia_detallado_SUNARP.jasper");
+    private final File archivo = Main.FICHERO_REPORTE_ASISTENCIA_DETALLADO;
     private final Font fuente;
     private final Interprete interprete = new InterpreteDetalleGRP();
     private final AreaEmpleadoControlador aempc = new AreaEmpleadoControlador();
@@ -406,6 +406,7 @@ public class RptRegistroAsistencia extends javax.swing.JInternalFrame {
         pnlOpciones.setLayout(new java.awt.GridLayout(1, 0, 5, 0));
 
         jButton4.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icon_jornada.png"))); // NOI18N
         jButton4.setText("Ver marcaciones en el día");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -415,6 +416,7 @@ public class RptRegistroAsistencia extends javax.swing.JInternalFrame {
         pnlOpciones.add(jButton4);
 
         jButton6.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Edit_24x24.png"))); // NOI18N
         jButton6.setText("Marcación manual");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -424,6 +426,7 @@ public class RptRegistroAsistencia extends javax.swing.JInternalFrame {
         pnlOpciones.add(jButton6);
 
         btnImprimir.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
+        btnImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Print_24x24.png"))); // NOI18N
         btnImprimir.setText("Imprimir");
         btnImprimir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -433,6 +436,7 @@ public class RptRegistroAsistencia extends javax.swing.JInternalFrame {
         pnlOpciones.add(btnImprimir);
 
         jButton3.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Print_24x24.png"))); // NOI18N
         jButton3.setText("Imprimir Resumen");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -964,7 +968,7 @@ public class RptRegistroAsistencia extends javax.swing.JInternalFrame {
     }
 
     private void imprimirResumen() {
-        File resumenFile = new File("reportes/reporte_asistencia_resumen.jasper");
+        File resumenFile = Main.FICHERO_REPORTE_ASISTENCIA_RESUMEN;
 
         Map<String, Object> parametros = this.obtenerParametros();
         Component report = reporteador.obtenerReporte(interpreteResumen.interpretar(asistenciaList), resumenFile, parametros);
