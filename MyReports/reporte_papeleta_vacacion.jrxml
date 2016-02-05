@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporte_papeleta_vacacion" pageWidth="595" pageHeight="380" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="55865ced-10c9-4375-a77d-07d9f5f8916b">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="reporte_usuario" class="java.lang.String">
+		<defaultValueExpression><![CDATA["fesquivelc"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="reporte_institucion" class="java.lang.String"/>
+	<parameter name="vac_id" class="java.lang.Long"/>
+	<queryString>
+		<![CDATA[SELECT
+pers.nro_documento AS pers_nro_documento,
+pers.paterno AS pers_paterno,
+pers.materno AS pers_materno,
+pers.nombres AS pers_nombres,
+vac.fecha_inicio AS vac_fecha_inicio,
+vac.fecha_fin AS vac_fecha_fin,
+vac.periodo_anio AS per_anio,
+vac.documento AS vac_documento
+FROM
+personal.persona pers INNER JOIN
+Vacacion vac ON pers.nro_documento = vac.empleado_nro_documento
+WHERE
+vac.id = $P{vac_id}]]>
+	</queryString>
+	<field name="pers_nro_documento" class="java.lang.String"/>
+	<field name="pers_paterno" class="java.lang.String"/>
+	<field name="pers_materno" class="java.lang.String"/>
+	<field name="pers_nombres" class="java.lang.String"/>
+	<field name="vac_fecha_inicio" class="java.sql.Timestamp"/>
+	<field name="vac_fecha_fin" class="java.sql.Timestamp"/>
+	<field name="per_anio" class="java.lang.Integer"/>
+	<field name="vac_documento" class="java.lang.String"/>
+	<group name="grp_persona" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{pers_nro_documento}]]></groupExpression>
+	</group>
+	<detail>
+		<band height="313">
+			<rectangle>
+				<reportElement x="277" y="165" width="278" height="143" uuid="c1666615-bfc2-4328-9a8d-f71922cf92b4"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="165" width="277" height="143" uuid="7986b84d-2f01-4f64-96ac-8d91f4b5ec78"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="278" width="277" height="30" backcolor="#CCCCCC" uuid="b4e9e4fd-eee9-414b-90cd-f0a7335455ea"/>
+				<box>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FIRMA DEL EMPLEADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="277" y="278" width="278" height="30" backcolor="#CCCCCC" uuid="a521a82b-3aa6-437d-b6d8-67151998624a"/>
+				<box>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FIRMA DE QUIEN AUTORIZA EL PERMISO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="40" backcolor="#CCCCCC" uuid="4cfb78dd-7713-4ac0-b4f0-db24fa40b261"/>
+				<box>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[USO FÍSICO DE VACACIONES]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="131" y="40" width="424" height="25" uuid="549d62b4-ce7f-44ee-8b0b-d7eb545a5e91"/>
+				<box leftPadding="5">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{reporte_institucion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="65" width="328" height="25" uuid="fad419de-4cc8-4ed1-8297-24344076c541"/>
+				<box leftPadding="5">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[String.format("%s %s %s",
+$F{pers_paterno} == null ? "" : $F{pers_paterno},
+$F{pers_materno} == null ? "" : $F{pers_materno},
+$F{pers_nombres} == null ? "" : $F{pers_nombres}
+)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="65" width="131" height="25" backcolor="#CCCCCC" uuid="37c577c5-a372-4d92-8b6b-b9b8e1035afa"/>
+				<box leftPadding="5">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DNI / NOMBRE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="40" width="131" height="25" backcolor="#CCCCCC" uuid="b6efca85-dc12-4a0f-a1ba-819154f050e9"/>
+				<box leftPadding="5">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INSTITUCIÓN:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="131" y="65" width="96" height="25" uuid="ea2eb213-2319-49cc-b634-b5c992741fdb"/>
+				<box leftPadding="5">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pers_nro_documento}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="90" width="131" height="25" backcolor="#CCCCCC" uuid="012c8a93-05e9-4f88-86cd-ddfc750efbd3"/>
+				<box leftPadding="5">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOCUMENTO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="131" y="90" width="424" height="25" uuid="11eab99c-eb01-4326-b90e-8ed07182290d"/>
+				<box leftPadding="5">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vac_documento}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="115" width="131" height="25" backcolor="#CCCCCC" uuid="1c634bff-088b-4f4f-a85f-a271741a5bb6"/>
+				<box leftPadding="5">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PERÍODO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="140" width="131" height="25" backcolor="#CCCCCC" uuid="f38be835-ab61-4b03-adbd-fe086dc66b7c"/>
+				<box leftPadding="5">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INICIO:]]></text>
+			</staticText>
+			<textField pattern="dd.MM.yyyy">
+				<reportElement x="131" y="140" width="146" height="25" uuid="66b76543-a36f-44d5-8d89-73f39ac10077"/>
+				<box leftPadding="5">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vac_fecha_inicio}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement x="131" y="115" width="424" height="25" uuid="691b3839-0f69-4741-8085-c115918b77c2"/>
+				<box leftPadding="5">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{per_anio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="277" y="140" width="131" height="25" backcolor="#CCCCCC" uuid="fd64d665-7ad9-4380-8d65-05c6859c72f7"/>
+				<box leftPadding="5">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FIN:]]></text>
+			</staticText>
+			<textField pattern="dd.MM.yyyy">
+				<reportElement x="408" y="140" width="147" height="25" uuid="c3411176-0ab5-42e0-b940-cc6a2f2a8551"/>
+				<box leftPadding="5">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vac_fecha_fin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

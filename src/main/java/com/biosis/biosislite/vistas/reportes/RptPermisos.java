@@ -6,6 +6,7 @@
 package com.biosis.biosislite.vistas.reportes;
 
 
+import com.biosis.biosislite.Main;
 import com.biosis.biosislite.controladores.DetalleGrupoControlador;
 import com.biosis.biosislite.controladores.EmpleadoControlador;
 import com.biosis.biosislite.controladores.GrupoHorarioControlador;
@@ -556,7 +557,7 @@ public class RptPermisos extends javax.swing.JInternalFrame {
     private final DateFormat dfFecha = new SimpleDateFormat("dd/MM/yyyy");
 
     private void imprimir() {
-        String reporte = "reportes/r_permisos_licencia_comision.jasper";
+//        String reporte = "reportes/r_permisos_licencia_comision.jasper";
         List<String> listaTipo = obtenerTipos();
         List<Empleado> empleados = obtenerDNI();
         List<String> listaDNI = new ArrayList<>();
@@ -607,7 +608,7 @@ public class RptPermisos extends javax.swing.JInternalFrame {
 //            reporte = "reportes/ensa_reporte_permiso.jasper";
 //            parametros.put("tipo", tipo);
 //        }
-        File archivo = new File(reporte);
+        File archivo = Main.FICHERO_REPORTE_PERMISOS;
         System.out.println("archivo: " + archivo.getAbsolutePath());
 
         parametros.put("usuario", UsuarioActivo.getUsuario().getLogin());

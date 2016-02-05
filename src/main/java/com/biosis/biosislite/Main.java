@@ -27,9 +27,15 @@ public class Main {
     public static String REPORTE_RUC = "";
     public static String REPORTE_LOGO = "";
     
-    public static File FICHERO_REPORTE_SALIDA;
+    public static File FICHERO_REPORTE_PAPELETA_SALIDA;
+    public static File FICHERO_REPORTE_PAPELETA_VACACION;
     public static File FICHERO_REPORTE_ASISTENCIA_DETALLADO;
     public static File FICHERO_REPORTE_ASISTENCIA_RESUMEN;
+    public static File FICHERO_REPORTE_PERMISOS;
+    public static File FICHERO_REPORTE_EMPLEADOS_NO_MARCAN;
+    public static File FICHERO_REPORTE_TARDANZAS_MES;
+    public static File FICHERO_REPORTE_VACACIONES_SALDO;
+    public static File FICHERO_REPORTE_VACACIONES_DETALLE;
 
     public static void main(String[] args) {
         // TODO code application logic here
@@ -63,9 +69,15 @@ public class Main {
         REPORTE_LOGO = props.getProperty("reporte_logo");
         REPORTE_RUC = props.getProperty("reporte_ruc");
         
-        FICHERO_REPORTE_SALIDA = new File(recursos.getProperty("reporte_permisos"));
+        FICHERO_REPORTE_PAPELETA_SALIDA = new File(recursos.getProperty("reporte_papeleta_salida"));
+        FICHERO_REPORTE_PAPELETA_VACACION = new File(recursos.getProperty("reporte_papeleta_vacacion"));
         FICHERO_REPORTE_ASISTENCIA_DETALLADO = new File(recursos.getProperty("reporte_asistencia_detallado"));
         FICHERO_REPORTE_ASISTENCIA_RESUMEN = new File(recursos.getProperty("reporte_asistencia_resumen"));
+        FICHERO_REPORTE_PERMISOS = new File(recursos.getProperty("reporte_permisos"));
+        FICHERO_REPORTE_TARDANZAS_MES = new File(recursos.getProperty("reporte_tardanzas_mes"));
+        FICHERO_REPORTE_EMPLEADOS_NO_MARCAN = new File(recursos.getProperty("reporte_empleados_no_marcan"));
+        FICHERO_REPORTE_VACACIONES_SALDO = new File(recursos.getProperty("reporte_vacaciones_saldo"));
+        FICHERO_REPORTE_VACACIONES_DETALLE = new File(recursos.getProperty("reporte_vacaciones_detalle"));
         
         DlgLogin principal = new DlgLogin(null, true);
         principal.setVisible(true);

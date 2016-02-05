@@ -57,7 +57,7 @@ public class RptTardanzasMes extends javax.swing.JInternalFrame {
     private final ReporteUtil reporteador;
     private final DateFormat dfFecha;
     private final EmpleadoControlador ec;
-    private final File archivo = new File("reportes/reporte_tardanzas_mensual.jasper");
+    private final File archivo = Main.FICHERO_REPORTE_TARDANZAS_MES;
 
     public RptTardanzasMes() {
         initComponents();

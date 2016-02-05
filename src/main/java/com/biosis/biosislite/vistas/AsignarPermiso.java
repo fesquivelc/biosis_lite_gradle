@@ -773,7 +773,7 @@ public class AsignarPermiso extends javax.swing.JInternalFrame {
 
     private void imprimirBoleta(AsignacionPermiso seleccionada) {
 
-        File reporte = Main.FICHERO_REPORTE_SALIDA;
+        File reporte = Main.FICHERO_REPORTE_PAPELETA_SALIDA;
 //        List<Long> lista = new ArrayList<>();
 
         Map<String, Object> parametros = new HashMap<>();

@@ -733,7 +733,7 @@ public class AsignarVacacion extends javax.swing.JInternalFrame {
     private final TCAnalisisControlador tcac = new TCAnalisisControlador();
 
     private void retrocederTiempo(List<String> dnis, Date fechaInicio) {
-        tcac.retrocederTiempo(dnis, fechaInicio);
+//        tcac.retrocederTiempo(dnis, fechaInicio);
     }
     private void tblTablaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblTablaMouseReleased
         // TODO add your handling code here:
@@ -1149,7 +1149,7 @@ public class AsignarVacacion extends javax.swing.JInternalFrame {
     }
 
     private void imprimirBoleta(Vacacion seleccionada) {
-        File reporte = new File("reportes/reporte_papeleta_vacacion.jasper");
+        File reporte = Main.FICHERO_REPORTE_PAPELETA_VACACION;
         Map<String, Object> parametros = new HashMap<>();
         parametros.put("vac_id", seleccionada.getId());
         parametros.put("reporte_institucion", Main.REPORTE_INSTITUCION);

@@ -67,7 +67,7 @@ public class RptNoMarcan extends javax.swing.JInternalFrame {
     private final ReporteUtil reporteador;
     private final DateFormat dfFecha;
     private final EmpleadoControlador ec;
-    private final File archivo = new File("reportes/reporte_empleados_no_marcan.jasper");
+    private final File archivo = Main.FICHERO_REPORTE_EMPLEADOS_NO_MARCAN;
     private final Font fuente;
     private final Interprete interprete = new InterpreteNoMarcacion();
     private final AreaEmpleadoControlador aempc = new AreaEmpleadoControlador();

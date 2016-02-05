@@ -435,12 +435,12 @@ public class RptVacaciones extends javax.swing.JInternalFrame {
 
         if (radSaldo.isSelected()) {
             List<SaldoVacacional> saldos = generarSaldos((Periodo) cboPeriodo.getSelectedItem(), empleados);
-            String ficheroReport = "reportes/ensa_reporte_saldo_vacacion.jasper";
+//            String ficheroReport = "reportes/ensa_reporte_saldo_vacacion.jasper";
             Map<String, Object> parametros = new HashMap<>();
             parametros.put("reporte_usuario", UsuarioActivo.getUsuario().getLogin());
             parametros.put("reporte_institucion", Main.REPORTE_INSTITUCION);
             parametros.put("periodo_anio", ((Periodo) cboPeriodo.getSelectedItem()).getAnio());
-            File reporteFile = new File(ficheroReport);
+            File reporteFile = Main.FICHERO_REPORTE_VACACIONES_SALDO;
             Component component = reporteUtil.obtenerReporte(saldos, reporteFile, parametros);
             if (component != null) {
                 pnlTab.remove(0);
@@ -454,9 +454,9 @@ public class RptVacaciones extends javax.swing.JInternalFrame {
         for (Empleado e : empleados) {
             dnis.add(e.getNroDocumento());
         }
-        String ficheroReporte = "reportes/ensa_reporte_vacacion.jasper";
+//        String ficheroReporte = "reportes/ensa_reporte_vacacion.jasper";
 
-        File archivo = new File(ficheroReporte);
+        File archivo = Main.FICHERO_REPORTE_VACACIONES_DETALLE;
         Map<String, Object> parametros = new HashMap<>();
         parametros.put("reporte_usuario", UsuarioActivo.getUsuario().getLogin());
         parametros.put("persona_lista", dnis);

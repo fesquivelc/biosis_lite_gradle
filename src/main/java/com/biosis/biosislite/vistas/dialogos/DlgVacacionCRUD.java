@@ -469,7 +469,7 @@ public class DlgVacacionCRUD extends javax.swing.JDialog {
 
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
         // TODO add your handling code here:
-        File reporte = Main.FICHERO_REPORTE_SALIDA;
+        File reporte = Main.FICHERO_REPORTE_PAPELETA_SALIDA;
 //        List<Long> lista = new ArrayList<>();
 
         Map<String, Object> parametros = new HashMap<>();
