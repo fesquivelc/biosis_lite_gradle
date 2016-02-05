@@ -75,6 +75,8 @@ public class GestionHorarios extends javax.swing.JInternalFrame {
 
         setTitle("Gestión de Horarios");
 
+        jTabbedPane1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+
         pnlHvsE.setLayout(new java.awt.GridLayout(1, 2));
 
         pnlHorariosHvsE.setBorder(javax.swing.BorderFactory.createTitledBorder("Horarios"));
@@ -98,6 +100,7 @@ public class GestionHorarios extends javax.swing.JInternalFrame {
         gridBagConstraints.weightx = 0.1;
         pnlParamBusquedaHvsE.add(txtBusquedaHHvsE, gridBagConstraints);
 
+        btnBuscarH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Search.png"))); // NOI18N
         btnBuscarH.setText("Buscar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
@@ -123,12 +126,15 @@ public class GestionHorarios extends javax.swing.JInternalFrame {
 
         pnlButtonsHHvsE.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 0));
 
+        btnNuevoH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Add_16x16.png"))); // NOI18N
         btnNuevoH.setText("Agregar Horario");
         pnlButtonsHHvsE.add(btnNuevoH);
 
+        btnModificarH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Edit_16x16.png"))); // NOI18N
         btnModificarH.setText("Modificar");
         pnlButtonsHHvsE.add(btnModificarH);
 
+        btnEliminarH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Remove_16x16.png"))); // NOI18N
         btnEliminarH.setText("Eliminar");
         pnlButtonsHHvsE.add(btnEliminarH);
 
@@ -158,6 +164,7 @@ public class GestionHorarios extends javax.swing.JInternalFrame {
         gridBagConstraints.weightx = 0.1;
         pnlFiltroEmpleadoHvsE.add(txtBusquedaEHvsE, gridBagConstraints);
 
+        btnBuscarE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Search.png"))); // NOI18N
         btnBuscarE.setText("Buscar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -184,15 +191,19 @@ public class GestionHorarios extends javax.swing.JInternalFrame {
 
         pnlButtonsEHvsE.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 0));
 
+        btnNuevoE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Add_16x16.png"))); // NOI18N
         btnNuevoE.setText("Agregar Empleado(s)");
         pnlButtonsEHvsE.add(btnNuevoE);
 
+        btnModificarE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Edit_16x16.png"))); // NOI18N
         btnModificarE.setText("Modificar");
         pnlButtonsEHvsE.add(btnModificarE);
 
+        btnEliminarE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Remove_16x16.png"))); // NOI18N
         btnEliminarE.setText("Eliminar");
         pnlButtonsEHvsE.add(btnEliminarE);
 
+        btnImportarE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Forward_16x16.png"))); // NOI18N
         btnImportarE.setText("Importar Empleados");
         pnlButtonsEHvsE.add(btnImportarE);
 
@@ -225,6 +236,7 @@ public class GestionHorarios extends javax.swing.JInternalFrame {
         gridBagConstraints.weightx = 0.1;
         pnlFiltroEmpleadoEvsH.add(txtBuscarEEvsH, gridBagConstraints);
 
+        btnBuscarEEvsH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Search.png"))); // NOI18N
         btnBuscarEEvsH.setText("Buscar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -271,6 +283,7 @@ public class GestionHorarios extends javax.swing.JInternalFrame {
         gridBagConstraints.weightx = 0.1;
         pnlParamBusquedaEvsH.add(txtBuscarHEvsH, gridBagConstraints);
 
+        btnBuscarHEvsH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Search.png"))); // NOI18N
         btnBuscarHEvsH.setText("Buscar");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -296,12 +309,15 @@ public class GestionHorarios extends javax.swing.JInternalFrame {
 
         pnlButtonsHEvsH.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 0));
 
+        btnNuevoHEvsH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Add_16x16.png"))); // NOI18N
         btnNuevoHEvsH.setText("Agregar Horario");
         pnlButtonsHEvsH.add(btnNuevoHEvsH);
 
+        btnModificarAsigHEvsH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Edit_16x16.png"))); // NOI18N
         btnModificarAsigHEvsH.setText("Modificar");
         pnlButtonsHEvsH.add(btnModificarAsigHEvsH);
 
+        btnEliminarHEvsH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Remove_16x16.png"))); // NOI18N
         btnEliminarHEvsH.setText("Eliminar");
         pnlButtonsHEvsH.add(btnEliminarHEvsH);
 

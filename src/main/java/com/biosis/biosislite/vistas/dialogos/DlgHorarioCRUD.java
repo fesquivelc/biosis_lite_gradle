@@ -30,78 +30,107 @@ public class DlgHorarioCRUD extends javax.swing.JDialog {
         java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtCodigoHorario = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        txtNombreHorario = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        txtDocumentoHorario = new javax.swing.JTextField();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        btnAgregarJornada = new javax.swing.JButton();
+        btnQuitarJornada = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jXTable1 = new org.jdesktop.swingx.JXTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        tblJornadasAsig = new org.jdesktop.swingx.JXTable();
         jPanel2 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos de horario:"));
-        java.awt.GridBagLayout jPanel1Layout = new java.awt.GridBagLayout();
-        jPanel1Layout.columnWidths = new int[] {0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0};
-        jPanel1Layout.rowHeights = new int[] {0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0};
-        jPanel1.setLayout(jPanel1Layout);
+        jPanel1.setLayout(new java.awt.BorderLayout(0, 5));
+
+        jLabel5.setBackground(new java.awt.Color(204, 204, 255));
+        jLabel5.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("HORARIOS");
+        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel5.setOpaque(true);
+        jPanel1.add(jLabel5, java.awt.BorderLayout.PAGE_START);
+
+        java.awt.GridBagLayout jPanel3Layout = new java.awt.GridBagLayout();
+        jPanel3Layout.columnWidths = new int[] {0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0};
+        jPanel3Layout.rowHeights = new int[] {0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0};
+        jPanel3.setLayout(jPanel3Layout);
 
         jLabel1.setText("Código:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel1.add(jLabel1, gridBagConstraints);
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        jPanel3.add(jLabel1, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.weightx = 0.1;
-        jPanel1.add(jTextField1, gridBagConstraints);
+        jPanel3.add(txtCodigoHorario, gridBagConstraints);
 
         jLabel2.setText("Nombre:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel1.add(jLabel2, gridBagConstraints);
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        jPanel3.add(jLabel2, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.gridwidth = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.weightx = 0.1;
-        jPanel1.add(jTextField2, gridBagConstraints);
+        jPanel3.add(txtNombreHorario, gridBagConstraints);
 
         jLabel3.setText("Documento:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 8;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel1.add(jLabel3, gridBagConstraints);
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        jPanel3.add(jLabel3, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 8;
         gridBagConstraints.gridwidth = 9;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        jPanel1.add(jTextField3, gridBagConstraints);
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.weightx = 0.1;
+        jPanel3.add(txtDocumentoHorario, gridBagConstraints);
 
-        jLabel4.setText("Jornadas:");
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Jornadas"));
+        java.awt.GridBagLayout jPanel4Layout = new java.awt.GridBagLayout();
+        jPanel4Layout.columnWidths = new int[] {0};
+        jPanel4Layout.rowHeights = new int[] {0, 5, 0};
+        jPanel4.setLayout(jPanel4Layout);
+
+        btnAgregarJornada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Add_16x16.png"))); // NOI18N
+        btnAgregarJornada.setText("Agregar jornada");
+        jPanel5.add(btnAgregarJornada);
+
+        btnQuitarJornada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/minus-16.png"))); // NOI18N
+        btnQuitarJornada.setText("Quitar jornada");
+        jPanel5.add(btnQuitarJornada);
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
-        jPanel1.add(jLabel4, gridBagConstraints);
+        jPanel4.add(jPanel5, gridBagConstraints);
 
-        jXTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblJornadasAsig.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -112,41 +141,37 @@ public class DlgHorarioCRUD extends javax.swing.JDialog {
 
             }
         ));
-        jScrollPane1.setViewportView(jXTable1);
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 12;
-        gridBagConstraints.gridwidth = 9;
-        gridBagConstraints.gridheight = 9;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 0.1;
-        gridBagConstraints.weighty = 0.1;
-        jPanel1.add(jScrollPane1, gridBagConstraints);
-
-        jButton1.setText("-");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 14;
-        gridBagConstraints.gridy = 16;
-        jPanel1.add(jButton1, gridBagConstraints);
-
-        jButton2.setText("+");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 14;
-        gridBagConstraints.gridy = 12;
-        jPanel1.add(jButton2, gridBagConstraints);
-
-        jButton3.setText("Guardar");
-        jPanel2.add(jButton3);
-
-        jButton4.setText("Cancelar");
-        jPanel2.add(jButton4);
+        jScrollPane1.setViewportView(tblJornadasAsig);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 24;
-        gridBagConstraints.gridwidth = 15;
-        jPanel1.add(jPanel2, gridBagConstraints);
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
+        jPanel4.add(jScrollPane1, gridBagConstraints);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridwidth = 11;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
+        jPanel3.add(jPanel4, gridBagConstraints);
+
+        jPanel1.add(jPanel3, java.awt.BorderLayout.CENTER);
+
+        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Save_16x16.png"))); // NOI18N
+        btnGuardar.setText("Guardar");
+        jPanel2.add(btnGuardar);
+
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Remove_16x16.png"))); // NOI18N
+        btnCancelar.setText("Cancelar");
+        jPanel2.add(btnCancelar);
+
+        jPanel1.add(jPanel2, java.awt.BorderLayout.PAGE_END);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -154,14 +179,14 @@ public class DlgHorarioCRUD extends javax.swing.JDialog {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 560, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -211,20 +236,23 @@ public class DlgHorarioCRUD extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnAgregarJornada;
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton btnQuitarJornada;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private org.jdesktop.swingx.JXTable jXTable1;
+    private org.jdesktop.swingx.JXTable tblJornadasAsig;
+    private javax.swing.JTextField txtCodigoHorario;
+    private javax.swing.JTextField txtDocumentoHorario;
+    private javax.swing.JTextField txtNombreHorario;
     // End of variables declaration//GEN-END:variables
 }
