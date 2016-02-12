@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="9" version="2.0">
+<workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="32" y="32">
 <fastViewData fastViewLocation="1024"/>
@@ -18,11 +18,12 @@
 <coolItem id="com.jaspersoft.studio.community.toolbar" itemType="typeToolBarContribution" x="38" y="34"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="57" y="34"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="99" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="206" y="34"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="com.jaspersoft.studio.editor.JrxmlEditor" itemType="typeToolBarContribution" x="61" y="34"/>
 <coolItem id="com.jaspersoft.studio.graphic.text" itemType="typeToolBarContribution" x="630" y="34"/>
 <coolItem id="com.jaspersoft.studio.graphic.size" itemType="typeToolBarContribution" x="84" y="34"/>
+<coolItem id="com.jaspersoft.studio.graphic.image" itemType="typeToolBarContribution" x="38" y="34"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -37,8 +38,8 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="com.jaspersoft.studio.editor.JrxmlEditor" name="reporte_asistencia_detallado_SUNARP.jrxml" partName="reporte_asistencia_detallado_SUNARP.jrxml" path="C:/Users/Francis/Documents/NetBeansProjects/BiosisLite/MyReports/reporte_asistencia_detallado_SUNARP.jrxml" title="reporte_asistencia_detallado_SUNARP.jrxml" tooltip="MyReports/reporte_asistencia_detallado_SUNARP.jrxml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MyReports/reporte_asistencia_detallado_SUNARP.jrxml"/>
+<editor activePart="true" focus="true" id="com.jaspersoft.studio.editor.JrxmlEditor" name="reporte_asistencia_detallado_SUNARP2.jrxml" partName="reporte_asistencia_detallado_SUNARP2.jrxml" path="C:/Users/Francis/Documents/NetBeansProjects/BiosisLite/MyReports/reporte_asistencia_detallado_SUNARP2.jrxml" title="reporte_asistencia_detallado_SUNARP2.jrxml" tooltip="MyReports/reporte_asistencia_detallado_SUNARP2.jrxml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MyReports/reporte_asistencia_detallado_SUNARP2.jrxml"/>
 </editor>
 </editors>
 <views>
@@ -84,8 +85,8 @@
 <alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
 <hide_menu_item_id id="org.eclipse.ui.run"/>
 <hide_menu_item_id id="org.eclipse.search.menu"/>
-<hide_toolbar_item_id id="org.eclipse.ui.workbench.navigate"/>
 <hide_toolbar_item_id id="org.eclipse.debug.ui.commands.RunToLine"/>
+<hide_toolbar_item_id id="org.eclipse.ui.workbench.navigate"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="com.jaspersoft.studio.Repository"/>
@@ -116,7 +117,7 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.16448402" ratioLeft="314" ratioRight="1595" relationship="2" relative="org.eclipse.ui.internal.ViewStack@571da094"/>
+<info part="org.eclipse.ui.editorss" ratio="0.22105815" ratioLeft="422" ratioRight="1487" relationship="2" relative="org.eclipse.ui.internal.ViewStack@571da094"/>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@4073350c" ratio="0.7573929" ratioLeft="1255" ratioRight="402" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.gef.ui.palette_view" appearance="2" expanded="2">
 <page content="org.eclipse.gef.ui.palette_view" label="Palette"/>

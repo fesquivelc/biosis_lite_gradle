@@ -10,6 +10,7 @@ import com.biosis.biosislite.controladores.Controlador;
 import com.biosis.biosislite.controladores.TipoPermisoControlador;
 import com.biosis.biosislite.controladores.VacacionControlador;
 import com.biosis.biosislite.entidades.AsignacionPermiso;
+import com.biosis.biosislite.entidades.Periodo;
 import com.biosis.biosislite.entidades.Vacacion;
 import com.biosis.biosislite.entidades.escalafon.Empleado;
 import com.biosis.biosislite.utiles.HerramientaGeneral;
@@ -107,11 +108,11 @@ public class DlgVacacionCRUD extends javax.swing.JDialog {
         pnlInicio = new javax.swing.JPanel();
         txtFechaInicio = new javax.swing.JFormattedTextField(this.mascaraFecha);
         pnlPeriodo = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblPeriodo = new javax.swing.JTable();
         pnlAccionesEmpleado = new javax.swing.JPanel();
         lblCargandoPeriodo = new org.jdesktop.swingx.JXBusyLabel();
         btnHistorial = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblPeriodo = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         txtEmpleadoNombre = new javax.swing.JTextField();
@@ -266,6 +267,24 @@ public class DlgVacacionCRUD extends javax.swing.JDialog {
         pnlPeriodo.setBorder(javax.swing.BorderFactory.createTitledBorder("Selección de período"));
         pnlPeriodo.setLayout(new java.awt.BorderLayout(0, 5));
 
+        pnlAccionesEmpleado.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 0));
+
+        lblCargandoPeriodo.setText("Cargando saldos vacacionales");
+        lblCargandoPeriodo.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        pnlAccionesEmpleado.add(lblCargandoPeriodo);
+
+        btnHistorial.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        btnHistorial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Find_16x16.png"))); // NOI18N
+        btnHistorial.setText("Ver historial");
+        btnHistorial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHistorialActionPerformed(evt);
+            }
+        });
+        pnlAccionesEmpleado.add(btnHistorial);
+
+        pnlPeriodo.add(pnlAccionesEmpleado, java.awt.BorderLayout.PAGE_START);
+
         tblPeriodo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -280,19 +299,6 @@ public class DlgVacacionCRUD extends javax.swing.JDialog {
         jScrollPane1.setViewportView(tblPeriodo);
 
         pnlPeriodo.add(jScrollPane1, java.awt.BorderLayout.CENTER);
-
-        pnlAccionesEmpleado.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 0));
-
-        lblCargandoPeriodo.setText("Cargando saldos vacacionales");
-        lblCargandoPeriodo.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        pnlAccionesEmpleado.add(lblCargandoPeriodo);
-
-        btnHistorial.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
-        btnHistorial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Find_16x16.png"))); // NOI18N
-        btnHistorial.setText("Ver historial");
-        pnlAccionesEmpleado.add(btnHistorial);
-
-        pnlPeriodo.add(pnlAccionesEmpleado, java.awt.BorderLayout.PAGE_START);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -492,6 +498,11 @@ public class DlgVacacionCRUD extends javax.swing.JDialog {
             periodo.execute();
         }
     }//GEN-LAST:event_btnEmpleadosActionPerformed
+
+    private void btnHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistorialActionPerformed
+        // TODO add your handling code here:
+        Periodo periodo = this.periodoSeleccionado();
+    }//GEN-LAST:event_btnHistorialActionPerformed
 
     /**
      * @param args the command line arguments
@@ -707,6 +718,11 @@ public class DlgVacacionCRUD extends javax.swing.JDialog {
         }
 
         return accion;
+    }
+
+    private Periodo periodoSeleccionado() {
+        int fila = tblPeriodo.getSelectedRow();
+        
     }
 
     private class PeriodoWorker extends SwingWorker<Double, Void> {

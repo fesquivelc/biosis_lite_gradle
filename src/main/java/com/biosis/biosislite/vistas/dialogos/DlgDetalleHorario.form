@@ -33,7 +33,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel1" max="32767" attributes="0"/>
+              <Component id="jPanel1" pref="756" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -42,7 +42,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel1" pref="401" max="32767" attributes="0"/>
+              <Component id="jPanel1" pref="405" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -1047,60 +1047,88 @@
             </CodeStatement>
           </LayoutCode>
         </Container>
-        <Container class="javax.swing.JPanel" name="pnlDia">
+        <Container class="javax.swing.JPanel" name="pnlSeleccion">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Seleccionar d&#xed;as"/>
+                <TitledBorder title="Selecci&#xf3;n de d&#xed;as"/>
               </Border>
             </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-              <BorderConstraints direction="South"/>
+              <BorderConstraints direction="After"/>
             </Constraint>
           </Constraints>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
-            <Property name="columns" type="int" value="3"/>
-            <Property name="rows" type="int" value="0"/>
+            <Property name="columns" type="int" value="0"/>
+            <Property name="rows" type="int" value="1"/>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Lunes"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox2">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Martes"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox3">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Mi&#xe9;rcoles"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox4">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Jueves"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox6">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Viernes"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox7">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="S&#xe1;bado"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox8">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Domingo"/>
-              </Properties>
-            </Component>
+            <Container class="javax.swing.JPanel" name="pnlSemana">
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout">
+                <Property name="axis" type="int" value="1"/>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JRadioButton" name="radSemana">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="D&#xed;as de la semana"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chkLunes">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Lunes"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chkMartes">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Martes"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chkMiercoles">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Mi&#xe9;rcoles"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chkJueves">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Jueves"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chkViernes">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Viernes"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chkSabado">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="S&#xe1;bado"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="chkDomingo">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Domingo"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="pnlFecha">
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="0" pref="133" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="0" pref="356" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+            </Container>
           </SubComponents>
         </Container>
       </SubComponents>

@@ -860,3 +860,126 @@
 2016-02-05 04:16:07.906	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
 2016-02-05 04:16:07.908	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
 2016-02-05 04:16:22.632	ERROR	[main]	CLASE: DAOBiosis	 METODO: getEntityManager	LINEA:68	MSJE:Error calling Driver#connect Unable to build entity manager factory
+2016-02-05 18:05:19.814	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-05 18:05:19.821	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-05 18:05:19.824	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-05 18:05:20.673	 INFO	[main]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-02-05 18:05:21.218	 INFO	[main]	CLASE: Version	 METODO: logVersion	LINEA:54	MSJE:HHH000412: Hibernate Core {4.3.11.Final}
+2016-02-05 18:05:21.230	 INFO	[main]	CLASE: Environment	 METODO: <clinit>	LINEA:239	MSJE:HHH000206: hibernate.properties not found
+2016-02-05 18:05:21.236	 INFO	[main]	CLASE: Environment	 METODO: buildBytecodeProvider	LINEA:346	MSJE:HHH000021: Bytecode provider name : javassist
+2016-02-05 18:05:21.991	 INFO	[main]	CLASE: JavaReflectionManager	 METODO: <clinit>	LINEA:66	MSJE:HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-05 18:05:22.351	 WARN	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-02-05 18:05:22.519	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://SDB20000.distriluz.com.pe;databaseName=biosis;sendTimeAsDatetime=false]
+2016-02-05 18:05:22.520	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=adminbiosis, password=****}
+2016-02-05 18:05:22.521	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-02-05 18:05:22.526	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-02-05 18:05:24.384	 INFO	[main]	CLASE: Dialect	 METODO: <init>	LINEA:145	MSJE:HHH000400: Using dialect: org.hibernate.dialect.SQLServer2008Dialect
+2016-02-05 18:05:25.326	 INFO	[main]	CLASE: ASTQueryTranslatorFactory	 METODO: <init>	LINEA:47	MSJE:HHH000397: Using ASTQueryTranslatorFactory
+2016-02-05 18:16:27.961	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 18:16:28.745	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 18:16:28.753	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Feb 05 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 18:16:29.111	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 18:16:29.348	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 18:16:29.349	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Feb 05 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 18:16:48.180	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 18:16:48.423	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 18:16:48.425	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Mon Feb 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 18:28:43.944	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 18:28:44.240	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 18:28:44.241	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Thu Jan 28 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 18:32:18.087	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 18:32:18.467	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 18:32:18.469	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Thu Jan 28 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 18:49:16.480	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 18:49:16.860	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 18:49:16.861	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Jan 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 18:49:20.481	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 18:49:20.817	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 18:49:20.818	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Jan 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 18:55:24.305	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 18:55:24.549	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 18:55:24.549	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Jan 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 19:15:49.536	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 19:15:49.797	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 19:15:49.798	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Jan 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 19:16:14.792	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 19:16:15.059	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 19:16:15.060	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Jan 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 19:16:15.357	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 19:16:15.611	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 19:16:15.612	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Jan 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 19:16:21.944	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 19:16:22.190	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 19:16:22.190	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Jan 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 19:16:22.523	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 19:16:22.769	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 19:16:22.769	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Jan 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 19:16:34.656	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 19:16:34.906	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 19:16:34.907	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Jan 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 19:16:35.171	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 19:16:35.415	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 19:16:35.415	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Jan 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 19:16:37.560	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 19:16:37.807	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 19:16:37.808	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Jan 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 19:16:38.069	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 19:16:38.316	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 19:16:38.317	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Jan 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 19:20:12.360	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 19:20:12.618	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 19:20:12.620	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Jan 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 19:20:12.908	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 19:20:13.194	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 19:20:13.194	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Jan 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 19:20:13.468	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 19:20:13.721	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 19:20:13.721	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Jan 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 19:21:49.065	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 19:21:49.335	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 19:21:49.335	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Jan 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 19:23:42.089	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 19:23:42.337	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 19:23:42.337	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Jan 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 19:26:10.384	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 19:26:10.641	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 19:26:10.642	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Jan 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 19:26:17.145	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:572	MSJE:--> TOTAL X FECHA 1
+2016-02-05 19:26:17.398	 INFO	[AWT-EventQueue-0]	CLASE: VistaMarcaciones	 METODO: listar	LINEA:599	MSJE:--> buscarXFecha 1
+2016-02-05 19:26:17.399	 INFO	[AWT-EventQueue-0]	CLASE: MarcacionControlador	 METODO: buscarXFecha	LINEA:198	MSJE:FECHA INICIO: Fri Jan 01 18:16:18 COT 2016 - FECHA FIN: Fri Feb 05 23:59:59 COT 2016
+2016-02-05 19:32:43.620	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-05 19:32:43.623	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-05 19:32:43.624	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-05 19:32:43.759	 INFO	[main]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-02-05 19:32:43.889	 INFO	[main]	CLASE: Version	 METODO: logVersion	LINEA:54	MSJE:HHH000412: Hibernate Core {4.3.11.Final}
+2016-02-05 19:32:43.895	 INFO	[main]	CLASE: Environment	 METODO: <clinit>	LINEA:239	MSJE:HHH000206: hibernate.properties not found
+2016-02-05 19:32:43.898	 INFO	[main]	CLASE: Environment	 METODO: buildBytecodeProvider	LINEA:346	MSJE:HHH000021: Bytecode provider name : javassist
+2016-02-05 19:32:44.185	 INFO	[main]	CLASE: JavaReflectionManager	 METODO: <clinit>	LINEA:66	MSJE:HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-05 19:32:44.331	 WARN	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-02-05 19:32:44.370	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://SDB20000.distriluz.com.pe;databaseName=biosis;sendTimeAsDatetime=false]
+2016-02-05 19:32:44.371	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=adminbiosis, password=****}
+2016-02-05 19:32:44.371	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-02-05 19:32:44.374	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-02-05 19:32:44.864	 INFO	[main]	CLASE: Dialect	 METODO: <init>	LINEA:145	MSJE:HHH000400: Using dialect: org.hibernate.dialect.SQLServer2008Dialect
+2016-02-05 19:32:45.207	 INFO	[main]	CLASE: ASTQueryTranslatorFactory	 METODO: <init>	LINEA:47	MSJE:HHH000397: Using ASTQueryTranslatorFactory
+2016-02-05 19:34:58.650	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-05 19:34:58.653	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-05 19:34:58.654	 WARN	[main]	CLASE: HibernatePersistence	 METODO: logDeprecation	LINEA:58	MSJE:HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2016-02-05 19:34:58.784	 INFO	[main]	CLASE: LogHelper	 METODO: logPersistenceUnitInformation	LINEA:46	MSJE:HHH000204: Processing PersistenceUnitInfo [
+	name: biosis-PU
+	...]
+2016-02-05 19:34:58.934	 INFO	[main]	CLASE: Version	 METODO: logVersion	LINEA:54	MSJE:HHH000412: Hibernate Core {4.3.11.Final}
+2016-02-05 19:34:58.942	 INFO	[main]	CLASE: Environment	 METODO: <clinit>	LINEA:239	MSJE:HHH000206: hibernate.properties not found
+2016-02-05 19:34:58.945	 INFO	[main]	CLASE: Environment	 METODO: buildBytecodeProvider	LINEA:346	MSJE:HHH000021: Bytecode provider name : javassist
+2016-02-05 19:34:59.231	 INFO	[main]	CLASE: JavaReflectionManager	 METODO: <clinit>	LINEA:66	MSJE:HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-02-05 19:34:59.306	 WARN	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:93	MSJE:HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2016-02-05 19:34:59.352	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:166	MSJE:HHH000401: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://SDB20000.distriluz.com.pe;databaseName=biosis;sendTimeAsDatetime=false]
+2016-02-05 19:34:59.353	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:175	MSJE:HHH000046: Connection properties: {user=adminbiosis, password=****}
+2016-02-05 19:34:59.354	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: buildCreator	LINEA:180	MSJE:HHH000006: Autocommit mode: false
+2016-02-05 19:34:59.356	 INFO	[main]	CLASE: DriverManagerConnectionProviderImpl	 METODO: configure	LINEA:102	MSJE:HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-02-05 19:34:59.844	 INFO	[main]	CLASE: Dialect	 METODO: <init>	LINEA:145	MSJE:HHH000400: Using dialect: org.hibernate.dialect.SQLServer2008Dialect
+2016-02-05 19:35:00.211	 INFO	[main]	CLASE: ASTQueryTranslatorFactory	 METODO: <init>	LINEA:47	MSJE:HHH000397: Using ASTQueryTranslatorFactory

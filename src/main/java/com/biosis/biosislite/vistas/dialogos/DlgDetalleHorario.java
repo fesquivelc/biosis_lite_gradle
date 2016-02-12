@@ -45,14 +45,17 @@ public class DlgDetalleHorario extends javax.swing.JDialog {
         jScrollPane1 = new javax.swing.JScrollPane();
         jXTable1 = new org.jdesktop.swingx.JXTable();
         jButton1 = new javax.swing.JButton();
-        pnlDia = new javax.swing.JPanel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
-        jCheckBox7 = new javax.swing.JCheckBox();
-        jCheckBox8 = new javax.swing.JCheckBox();
+        pnlSeleccion = new javax.swing.JPanel();
+        pnlSemana = new javax.swing.JPanel();
+        radSemana = new javax.swing.JRadioButton();
+        chkLunes = new javax.swing.JCheckBox();
+        chkMartes = new javax.swing.JCheckBox();
+        chkMiercoles = new javax.swing.JCheckBox();
+        chkJueves = new javax.swing.JCheckBox();
+        chkViernes = new javax.swing.JCheckBox();
+        chkSabado = new javax.swing.JCheckBox();
+        chkDomingo = new javax.swing.JCheckBox();
+        pnlFecha = new javax.swing.JPanel();
 
         jCheckBox5.setText("jCheckBox5");
 
@@ -168,31 +171,51 @@ public class DlgDetalleHorario extends javax.swing.JDialog {
 
         jPanel1.add(pnlJornada, java.awt.BorderLayout.CENTER);
 
-        pnlDia.setBorder(javax.swing.BorderFactory.createTitledBorder("Seleccionar días"));
-        pnlDia.setLayout(new java.awt.GridLayout(0, 3));
+        pnlSeleccion.setBorder(javax.swing.BorderFactory.createTitledBorder("Selección de días"));
+        pnlSeleccion.setLayout(new java.awt.GridLayout());
 
-        jCheckBox1.setText("Lunes");
-        pnlDia.add(jCheckBox1);
+        pnlSemana.setLayout(new javax.swing.BoxLayout(pnlSemana, javax.swing.BoxLayout.Y_AXIS));
 
-        jCheckBox2.setText("Martes");
-        pnlDia.add(jCheckBox2);
+        radSemana.setText("Días de la semana");
+        pnlSemana.add(radSemana);
 
-        jCheckBox3.setText("Miércoles");
-        pnlDia.add(jCheckBox3);
+        chkLunes.setText("Lunes");
+        pnlSemana.add(chkLunes);
 
-        jCheckBox4.setText("Jueves");
-        pnlDia.add(jCheckBox4);
+        chkMartes.setText("Martes");
+        pnlSemana.add(chkMartes);
 
-        jCheckBox6.setText("Viernes");
-        pnlDia.add(jCheckBox6);
+        chkMiercoles.setText("Miércoles");
+        pnlSemana.add(chkMiercoles);
 
-        jCheckBox7.setText("Sábado");
-        pnlDia.add(jCheckBox7);
+        chkJueves.setText("Jueves");
+        pnlSemana.add(chkJueves);
 
-        jCheckBox8.setText("Domingo");
-        pnlDia.add(jCheckBox8);
+        chkViernes.setText("Viernes");
+        pnlSemana.add(chkViernes);
 
-        jPanel1.add(pnlDia, java.awt.BorderLayout.SOUTH);
+        chkSabado.setText("Sábado");
+        pnlSemana.add(chkSabado);
+
+        chkDomingo.setText("Domingo");
+        pnlSemana.add(chkDomingo);
+
+        pnlSeleccion.add(pnlSemana);
+
+        javax.swing.GroupLayout pnlFechaLayout = new javax.swing.GroupLayout(pnlFecha);
+        pnlFecha.setLayout(pnlFechaLayout);
+        pnlFechaLayout.setHorizontalGroup(
+            pnlFechaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 133, Short.MAX_VALUE)
+        );
+        pnlFechaLayout.setVerticalGroup(
+            pnlFechaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 356, Short.MAX_VALUE)
+        );
+
+        pnlSeleccion.add(pnlFecha);
+
+        jPanel1.add(pnlSeleccion, java.awt.BorderLayout.LINE_END);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -200,14 +223,14 @@ public class DlgDetalleHorario extends javax.swing.JDialog {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 756, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -257,15 +280,15 @@ public class DlgDetalleHorario extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox chkDomingo;
+    private javax.swing.JCheckBox chkJueves;
+    private javax.swing.JCheckBox chkLunes;
+    private javax.swing.JCheckBox chkMartes;
+    private javax.swing.JCheckBox chkMiercoles;
+    private javax.swing.JCheckBox chkSabado;
+    private javax.swing.JCheckBox chkViernes;
     private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
     private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -279,7 +302,10 @@ public class DlgDetalleHorario extends javax.swing.JDialog {
     private javax.swing.JTextField jTextField3;
     private org.jdesktop.swingx.JXTable jXTable1;
     private javax.swing.JPanel pnlDetalleJornada;
-    private javax.swing.JPanel pnlDia;
+    private javax.swing.JPanel pnlFecha;
     private javax.swing.JPanel pnlJornada;
+    private javax.swing.JPanel pnlSeleccion;
+    private javax.swing.JPanel pnlSemana;
+    private javax.swing.JRadioButton radSemana;
     // End of variables declaration//GEN-END:variables
 }
